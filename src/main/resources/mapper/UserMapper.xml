@@ -83,8 +83,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, account, password, username, countryCode, mobile, email, gender, authority_id, 
-    bannedTopic, bannedReply, bannedMessage, locded, deleted, topicCount, replyCount, 
+    id, account, password, username, countryCode, mobile, email, gender, authority_id,
+    bannedTopic, bannedReply, bannedMessage, locded, deleted, topicCount, replyCount,
     loginCount, registerTime, photo, comeFrom, introduction
   </sql>
   <select id="selectByExample" parameterType="net.industryhive.bean.UserExample" resultMap="BaseResultMap">
@@ -102,7 +102,7 @@
     </if>
   </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
+    select
     <include refid="Base_Column_List" />
     from user
     where id = #{id,jdbcType=INTEGER}
@@ -118,20 +118,20 @@
     </if>
   </delete>
   <insert id="insert" parameterType="net.industryhive.bean.User">
-    insert into user (id, account, password, 
-      username, countryCode, mobile, 
-      email, gender, authority_id, 
-      bannedTopic, bannedReply, bannedMessage, 
-      locded, deleted, topicCount, 
-      replyCount, loginCount, registerTime, 
+    insert into user (id, account, password,
+      username, countryCode, mobile,
+      email, gender, authority_id,
+      bannedTopic, bannedReply, bannedMessage,
+      locded, deleted, topicCount,
+      replyCount, loginCount, registerTime,
       photo, comeFrom, introduction
       )
-    values (#{id,jdbcType=INTEGER}, #{account,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
-      #{username,jdbcType=VARCHAR}, #{countrycode,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR}, 
-      #{email,jdbcType=VARCHAR}, #{gender,jdbcType=INTEGER}, #{authorityId,jdbcType=INTEGER}, 
-      #{bannedtopic,jdbcType=BIT}, #{bannedreply,jdbcType=BIT}, #{bannedmessage,jdbcType=BIT}, 
-      #{locded,jdbcType=BIT}, #{deleted,jdbcType=BIT}, #{topiccount,jdbcType=INTEGER}, 
-      #{replycount,jdbcType=INTEGER}, #{logincount,jdbcType=INTEGER}, #{registertime,jdbcType=TIMESTAMP}, 
+    values (#{id,jdbcType=INTEGER}, #{account,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
+      #{username,jdbcType=VARCHAR}, #{countrycode,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR},
+      #{email,jdbcType=VARCHAR}, #{gender,jdbcType=INTEGER}, #{authorityId,jdbcType=INTEGER},
+      #{bannedtopic,jdbcType=BIT}, #{bannedreply,jdbcType=BIT}, #{bannedmessage,jdbcType=BIT},
+      #{locded,jdbcType=BIT}, #{deleted,jdbcType=BIT}, #{topiccount,jdbcType=INTEGER},
+      #{replycount,jdbcType=INTEGER}, #{logincount,jdbcType=INTEGER}, #{registertime,jdbcType=TIMESTAMP},
       #{photo,jdbcType=VARCHAR}, #{comefrom,jdbcType=VARCHAR}, #{introduction,jdbcType=VARCHAR}
       )
   </insert>
@@ -462,4 +462,9 @@
       introduction = #{introduction,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <!--===============================================================================================================-->
+  <select id="selectAllUser" resultMap="BaseResultMap">
+    select id,account,username,email,gender,topicCount,replyCount,loginCount,registerTime from user limit #{startRow},100
+  </select>
+  <!--===============================================================================================================-->
 </mapper>
