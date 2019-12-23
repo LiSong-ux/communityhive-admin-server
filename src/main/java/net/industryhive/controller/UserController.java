@@ -30,32 +30,38 @@ public class UserController {
     @Autowired
     private LoginService loginService;
 
+    @RequestMapping("/login")
+    @ResponseBody
     public UnifiedResult login(HttpServletRequest request){
         HttpSession session = request.getSession();
 
         //先判断用户是否已经登录
-        if (session.getAttribute("user") != null) {
-            return UnifiedResult.build(400, "用户已登录", null);
+        if (session.getAttribute("admin") != null) {
+            return UnifiedResult.build(400, "您已登录", null);
         }
 
         String account = request.getParameter("account");
+        if (account!="LiSong-ux"){
+            return UnifiedResult.build(400,"账号或密码错误",null);
+        }
+
         String password = request.getParameter("password");
 
-        User user = userService.getUserByAccount(account);
-        if (user == null || !user.getPassword().equals(password)) {
+        User admin = userService.getUserByAccount("LiSong-ux");
+        if (admin == null || !admin.getPassword().equals(password)) {
             return UnifiedResult.build(400, "账号或密码错误", null);
         }
 
-        session.setAttribute("user", user);
+        session.setAttribute("admin", admin);
 
         // 用户登录次数+1
-        user.setLogincount(user.getLogincount() + 1);
-        userService.updateUser(user);
+        admin.setLogincount(admin.getLogincount() + 1);
+        userService.updateUser(admin);
 
         //记录用户登录ip、时间
         Login newLogin = new Login();
         newLogin.setIp(request.getRemoteAddr());
-        newLogin.setUserId(user.getId());
+        newLogin.setUserId(admin.getId());
         newLogin.setTime(new Date());
         //记录用户登录终端
         String terminal = request.getParameter("terminal");
@@ -64,15 +70,18 @@ public class UserController {
 
         loginService.addLogin(newLogin);
 
-        return UnifiedResult.ok(user);
+        return UnifiedResult.ok(admin);
     }
 
     @RequestMapping("/allUser")
     @ResponseBody
     public UnifiedResult getAllUser(HttpServletRequest request,Integer page) {
-        User admin = (User) request.getSession().getAttribute("admin");
-        if (admin==null){
-            return UnifiedResult.build(400,"您还未登录，请先登录",null);
+//        User admin = (User) request.getSession().getAttribute("admin");
+//        if (admin==null){
+//            return UnifiedResult.build(400,"您还未登录，请先登录",null);
+//        }
+        if (page==null){
+            page = 1;
         }
         List<User> userList = userService.getAllUser(page);
         return UnifiedResult.ok(userList);
