@@ -424,6 +424,66 @@ public class LoginExample {
             addCriterion("terminal not between", value1, value2, "terminal");
             return (Criteria) this;
         }
+
+        public Criteria andSystemIsNull() {
+            addCriterion("system is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSystemIsNotNull() {
+            addCriterion("system is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSystemEqualTo(Integer value) {
+            addCriterion("system =", value, "system");
+            return (Criteria) this;
+        }
+
+        public Criteria andSystemNotEqualTo(Integer value) {
+            addCriterion("system <>", value, "system");
+            return (Criteria) this;
+        }
+
+        public Criteria andSystemGreaterThan(Integer value) {
+            addCriterion("system >", value, "system");
+            return (Criteria) this;
+        }
+
+        public Criteria andSystemGreaterThanOrEqualTo(Integer value) {
+            addCriterion("system >=", value, "system");
+            return (Criteria) this;
+        }
+
+        public Criteria andSystemLessThan(Integer value) {
+            addCriterion("system <", value, "system");
+            return (Criteria) this;
+        }
+
+        public Criteria andSystemLessThanOrEqualTo(Integer value) {
+            addCriterion("system <=", value, "system");
+            return (Criteria) this;
+        }
+
+        public Criteria andSystemIn(List<Integer> values) {
+            addCriterion("system in", values, "system");
+            return (Criteria) this;
+        }
+
+        public Criteria andSystemNotIn(List<Integer> values) {
+            addCriterion("system not in", values, "system");
+            return (Criteria) this;
+        }
+
+        public Criteria andSystemBetween(Integer value1, Integer value2) {
+            addCriterion("system between", value1, value2, "system");
+            return (Criteria) this;
+        }
+
+        public Criteria andSystemNotBetween(Integer value1, Integer value2) {
+            addCriterion("system not between", value1, value2, "system");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

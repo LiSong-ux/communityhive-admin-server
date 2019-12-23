@@ -13,6 +13,8 @@ public class Login {
 
     private String terminal;
 
+    private Integer system;
+
     public Integer getId() {
         return id;
     }
@@ -51,5 +53,13 @@ public class Login {
 
     public void setTerminal(String terminal) {
         this.terminal = terminal == null ? null : terminal.trim();
+    }
+
+    public Integer getSystem() {
+        return system;
+    }
+
+    public void setSystem(Integer system) {
+        this.system = system;
     }
 }

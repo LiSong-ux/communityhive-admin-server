@@ -60,6 +60,7 @@ public class UserController {
         //记录用户登录终端
         String terminal = request.getParameter("terminal");
         newLogin.setTerminal(terminal);
+        newLogin.setSystem(1);
 
         loginService.addLogin(newLogin);
 
