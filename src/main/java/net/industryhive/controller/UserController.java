@@ -32,7 +32,7 @@ public class UserController {
 
     @RequestMapping("/login")
     @ResponseBody
-    public UnifiedResult login(HttpServletRequest request){
+    public UnifiedResult login(HttpServletRequest request) {
         HttpSession session = request.getSession();
 
         //先判断用户是否已经登录
@@ -41,8 +41,8 @@ public class UserController {
         }
 
         String account = request.getParameter("account");
-        if (account!="LiSong-ux"){
-            return UnifiedResult.build(400,"账号或密码错误",null);
+        if (account != "LiSong-ux") {
+            return UnifiedResult.build(400, "账号或密码错误", null);
         }
 
         String password = request.getParameter("password");
@@ -75,12 +75,12 @@ public class UserController {
 
     @RequestMapping("/allUser")
     @ResponseBody
-    public UnifiedResult getAllUser(HttpServletRequest request,Integer page) {
+    public UnifiedResult getAllUser(HttpServletRequest request, Integer page) {
 //        User admin = (User) request.getSession().getAttribute("admin");
-//        if (admin==null){
-//            return UnifiedResult.build(400,"您还未登录，请先登录",null);
+//        if (admin == null) {
+//            return UnifiedResult.build(400, "您还未登录，请先登录", null);
 //        }
-        if (page==null){
+        if (page == null) {
             page = 1;
         }
         List<User> userList = userService.getAllUser(page);
