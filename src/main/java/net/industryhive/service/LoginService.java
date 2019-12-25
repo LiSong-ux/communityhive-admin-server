@@ -16,7 +16,7 @@ public class LoginService {
     private LoginMapper loginMapper;
 
     public void addLogin(Login newLogin) {
-        loginMapper.insert(newLogin);
+        loginMapper.insertSelective(newLogin);
     }
 
 }

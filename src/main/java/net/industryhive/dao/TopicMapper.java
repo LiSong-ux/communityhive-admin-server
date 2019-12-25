@@ -1,9 +1,10 @@
 package net.industryhive.dao;
 
-import java.util.List;
 import net.industryhive.bean.Topic;
 import net.industryhive.bean.TopicExample;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface TopicMapper {
     long countByExample(TopicExample example);
@@ -33,4 +34,8 @@ public interface TopicMapper {
     int updateByPrimaryKeyWithBLOBs(Topic record);
 
     int updateByPrimaryKey(Topic record);
+
+    /******************************************************************************************************************/
+
+
 }
