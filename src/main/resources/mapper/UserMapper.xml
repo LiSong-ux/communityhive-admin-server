@@ -14,7 +14,7 @@
     <result column="bannedTopic" jdbcType="BIT" property="bannedtopic" />
     <result column="bannedReply" jdbcType="BIT" property="bannedreply" />
     <result column="bannedMessage" jdbcType="BIT" property="bannedmessage" />
-    <result column="locded" jdbcType="BIT" property="locded" />
+    <result column="locked" jdbcType="BIT" property="locked" />
     <result column="deleted" jdbcType="BIT" property="deleted" />
     <result column="topicCount" jdbcType="INTEGER" property="topiccount" />
     <result column="replyCount" jdbcType="INTEGER" property="replycount" />
@@ -84,7 +84,7 @@
   </sql>
   <sql id="Base_Column_List">
     id, account, password, username, countryCode, mobile, email, gender, authority_id,
-    bannedTopic, bannedReply, bannedMessage, locded, deleted, topicCount, replyCount,
+    bannedTopic, bannedReply, bannedMessage, locked, deleted, topicCount, replyCount,
     loginCount, registerTime, photo, comeFrom, introduction
   </sql>
   <select id="selectByExample" parameterType="net.industryhive.bean.UserExample" resultMap="BaseResultMap">
@@ -122,7 +122,7 @@
       username, countryCode, mobile,
       email, gender, authority_id,
       bannedTopic, bannedReply, bannedMessage,
-      locded, deleted, topicCount,
+      locked, deleted, topicCount,
       replyCount, loginCount, registerTime,
       photo, comeFrom, introduction
       )
@@ -130,7 +130,7 @@
       #{username,jdbcType=VARCHAR}, #{countrycode,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR},
       #{email,jdbcType=VARCHAR}, #{gender,jdbcType=INTEGER}, #{authorityId,jdbcType=INTEGER},
       #{bannedtopic,jdbcType=BIT}, #{bannedreply,jdbcType=BIT}, #{bannedmessage,jdbcType=BIT},
-      #{locded,jdbcType=BIT}, #{deleted,jdbcType=BIT}, #{topiccount,jdbcType=INTEGER},
+      #{locked,jdbcType=BIT}, #{deleted,jdbcType=BIT}, #{topiccount,jdbcType=INTEGER},
       #{replycount,jdbcType=INTEGER}, #{logincount,jdbcType=INTEGER}, #{registertime,jdbcType=TIMESTAMP},
       #{photo,jdbcType=VARCHAR}, #{comefrom,jdbcType=VARCHAR}, #{introduction,jdbcType=VARCHAR}
       )
@@ -174,8 +174,8 @@
       <if test="bannedmessage != null">
         bannedMessage,
       </if>
-      <if test="locded != null">
-        locded,
+      <if test="locked != null">
+        locked,
       </if>
       <if test="deleted != null">
         deleted,
@@ -239,8 +239,8 @@
       <if test="bannedmessage != null">
         #{bannedmessage,jdbcType=BIT},
       </if>
-      <if test="locded != null">
-        #{locded,jdbcType=BIT},
+      <if test="locked != null">
+        #{locked,jdbcType=BIT},
       </if>
       <if test="deleted != null">
         #{deleted,jdbcType=BIT},
@@ -313,8 +313,8 @@
       <if test="record.bannedmessage != null">
         bannedMessage = #{record.bannedmessage,jdbcType=BIT},
       </if>
-      <if test="record.locded != null">
-        locded = #{record.locded,jdbcType=BIT},
+      <if test="record.locked != null">
+        locked = #{record.locked,jdbcType=BIT},
       </if>
       <if test="record.deleted != null">
         deleted = #{record.deleted,jdbcType=BIT},
@@ -359,7 +359,7 @@
       bannedTopic = #{record.bannedtopic,jdbcType=BIT},
       bannedReply = #{record.bannedreply,jdbcType=BIT},
       bannedMessage = #{record.bannedmessage,jdbcType=BIT},
-      locded = #{record.locded,jdbcType=BIT},
+      locked = #{record.locked,jdbcType=BIT},
       deleted = #{record.deleted,jdbcType=BIT},
       topicCount = #{record.topiccount,jdbcType=INTEGER},
       replyCount = #{record.replycount,jdbcType=INTEGER},
@@ -408,8 +408,8 @@
       <if test="bannedmessage != null">
         bannedMessage = #{bannedmessage,jdbcType=BIT},
       </if>
-      <if test="locded != null">
-        locded = #{locded,jdbcType=BIT},
+      <if test="locked != null">
+        locked = #{locked,jdbcType=BIT},
       </if>
       <if test="deleted != null">
         deleted = #{deleted,jdbcType=BIT},
@@ -451,7 +451,7 @@
       bannedTopic = #{bannedtopic,jdbcType=BIT},
       bannedReply = #{bannedreply,jdbcType=BIT},
       bannedMessage = #{bannedmessage,jdbcType=BIT},
-      locded = #{locded,jdbcType=BIT},
+      locked = #{locked,jdbcType=BIT},
       deleted = #{deleted,jdbcType=BIT},
       topicCount = #{topiccount,jdbcType=INTEGER},
       replyCount = #{replycount,jdbcType=INTEGER},

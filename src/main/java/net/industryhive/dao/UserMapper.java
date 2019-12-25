@@ -1,9 +1,10 @@
 package net.industryhive.dao;
 
-import java.util.List;
 import net.industryhive.bean.User;
 import net.industryhive.bean.UserExample;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface UserMapper {
     long countByExample(UserExample example);
@@ -31,4 +32,5 @@ public interface UserMapper {
     /******************************************************************************************************************/
 
     List<User> selectAllUser(int startRow);
+
 }

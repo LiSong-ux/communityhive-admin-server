@@ -27,7 +27,7 @@ public class User {
 
     private Boolean bannedmessage;
 
-    private Boolean locded;
+    private Boolean locked;
 
     private Boolean deleted;
 
@@ -141,12 +141,12 @@ public class User {
         this.bannedmessage = bannedmessage;
     }
 
-    public Boolean getLocded() {
-        return locded;
+    public Boolean getLocked() {
+        return locked;
     }
 
-    public void setLocded(Boolean locded) {
-        this.locded = locded;
+    public void setLocked(Boolean locked) {
+        this.locked = locked;
     }
 
     public Boolean getDeleted() {

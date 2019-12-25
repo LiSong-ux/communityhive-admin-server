@@ -885,63 +885,63 @@ public class UserExample {
             return (Criteria) this;
         }
 
-        public Criteria andLocdedIsNull() {
-            addCriterion("locded is null");
+        public Criteria andLockedIsNull() {
+            addCriterion("locked is null");
             return (Criteria) this;
         }
 
-        public Criteria andLocdedIsNotNull() {
-            addCriterion("locded is not null");
+        public Criteria andLockedIsNotNull() {
+            addCriterion("locked is not null");
             return (Criteria) this;
         }
 
-        public Criteria andLocdedEqualTo(Boolean value) {
-            addCriterion("locded =", value, "locded");
+        public Criteria andLockedEqualTo(Boolean value) {
+            addCriterion("locked =", value, "locked");
             return (Criteria) this;
         }
 
-        public Criteria andLocdedNotEqualTo(Boolean value) {
-            addCriterion("locded <>", value, "locded");
+        public Criteria andLockedNotEqualTo(Boolean value) {
+            addCriterion("locked <>", value, "locked");
             return (Criteria) this;
         }
 
-        public Criteria andLocdedGreaterThan(Boolean value) {
-            addCriterion("locded >", value, "locded");
+        public Criteria andLockedGreaterThan(Boolean value) {
+            addCriterion("locked >", value, "locked");
             return (Criteria) this;
         }
 
-        public Criteria andLocdedGreaterThanOrEqualTo(Boolean value) {
-            addCriterion("locded >=", value, "locded");
+        public Criteria andLockedGreaterThanOrEqualTo(Boolean value) {
+            addCriterion("locked >=", value, "locked");
             return (Criteria) this;
         }
 
-        public Criteria andLocdedLessThan(Boolean value) {
-            addCriterion("locded <", value, "locded");
+        public Criteria andLockedLessThan(Boolean value) {
+            addCriterion("locked <", value, "locked");
             return (Criteria) this;
         }
 
-        public Criteria andLocdedLessThanOrEqualTo(Boolean value) {
-            addCriterion("locded <=", value, "locded");
+        public Criteria andLockedLessThanOrEqualTo(Boolean value) {
+            addCriterion("locked <=", value, "locked");
             return (Criteria) this;
         }
 
-        public Criteria andLocdedIn(List<Boolean> values) {
-            addCriterion("locded in", values, "locded");
+        public Criteria andLockedIn(List<Boolean> values) {
+            addCriterion("locked in", values, "locked");
             return (Criteria) this;
         }
 
-        public Criteria andLocdedNotIn(List<Boolean> values) {
-            addCriterion("locded not in", values, "locded");
+        public Criteria andLockedNotIn(List<Boolean> values) {
+            addCriterion("locked not in", values, "locked");
             return (Criteria) this;
         }
 
-        public Criteria andLocdedBetween(Boolean value1, Boolean value2) {
-            addCriterion("locded between", value1, value2, "locded");
+        public Criteria andLockedBetween(Boolean value1, Boolean value2) {
+            addCriterion("locked between", value1, value2, "locked");
             return (Criteria) this;
         }
 
-        public Criteria andLocdedNotBetween(Boolean value1, Boolean value2) {
-            addCriterion("locded not between", value1, value2, "locded");
+        public Criteria andLockedNotBetween(Boolean value1, Boolean value2) {
+            addCriterion("locked not between", value1, value2, "locked");
             return (Criteria) this;
         }
 
