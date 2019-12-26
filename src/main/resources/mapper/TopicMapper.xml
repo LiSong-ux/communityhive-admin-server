@@ -111,7 +111,7 @@
     </if>
   </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
-    select 
+    select
     <include refid="Base_Column_List" />
     ,
     <include refid="Blob_Column_List" />
@@ -129,13 +129,13 @@
     </if>
   </delete>
   <insert id="insert" parameterType="net.industryhive.bean.Topic">
-    insert into topic (id, user_id, submitTime, 
-      label, title, replyCount, 
-      viewCount, locked, hided, deleted, 
+    insert into topic (id, user_id, submitTime,
+      label, title, replyCount,
+      viewCount, locked, hided, deleted,
       content)
-    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{submittime,jdbcType=TIMESTAMP}, 
-      #{label,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{replycount,jdbcType=INTEGER}, 
-      #{viewcount,jdbcType=INTEGER}, #{locked,jdbcType=BIT}, #{hided,jdbcType=BIT}, #{deleted,jdbcType=BIT}, 
+    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{submittime,jdbcType=TIMESTAMP},
+      #{label,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{replycount,jdbcType=INTEGER},
+      #{viewcount,jdbcType=INTEGER}, #{locked,jdbcType=BIT}, #{hided,jdbcType=BIT}, #{deleted,jdbcType=BIT},
       #{content,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="net.industryhive.bean.Topic">
@@ -354,4 +354,20 @@
       deleted = #{deleted,jdbcType=BIT}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <!--===============================================================================================================-->
+  <resultMap extends="ResultMapWithBLOBs" id="ResultMapWithUsername" type="net.industryhive.been.wrap.WrapTopic">
+    <result column="username" jdbcType="VARCHAR" property="username"></result>
+    <result column="lastReply" jdbcType="VARCHAR" property="lastReply"></result>
+    <result column="lastSubmit" jdbcType="TIMESTAMP" property="lastSubmit"></result>
+  </resultMap>
+  <select id="findListWithUsername" parameterType="java.lang.Integer" resultMap="ResultMapWithUsername">
+        SELECT a.*,IFNULL(b.lastSubmit,a.submitTime) lastSubmit,IFNULL(b.lastReply,a.username) lastReply FROM
+        (SELECT topic.*,user.username FROM topic,user WHERE topic.deleted=0 AND topic.user_id=user.id) a
+        LEFT JOIN
+        (SELECT lastSubmit,user.username lastReply,reply.topic_id rti FROM
+        (SELECT MAX(reply.submitTime) lastSubmit FROM reply GROUP BY reply.topic_id) ma,reply,user
+        WHERE lastSubmit=reply.submitTime AND reply.user_id=user.id) b
+        ON a.id=b.rti ORDER BY lastSubmit DESC limit #{startRow},100
+    </select>
+  <!--===============================================================================================================-->
 </mapper>

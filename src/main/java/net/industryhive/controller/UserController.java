@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 用户管理Controller
@@ -84,7 +86,11 @@ public class UserController {
             page = 1;
         }
         List<User> userList = userService.getAllUser(page);
-        return UnifiedResult.ok(userList);
+        long userCount = userService.getUserCount();
+        Map<String,Object> map = new HashMap<>();
+        map.put("userList",userList);
+        map.put("userCount",userCount);
+        return UnifiedResult.ok(map);
     }
 
 }

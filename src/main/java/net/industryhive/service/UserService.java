@@ -35,6 +35,12 @@ public class UserService {
         return userList;
     }
 
+    public long getUserCount(){
+        UserExample example = new UserExample();
+        long userCount = userMapper.countByExample(example);
+        return userCount;
+    }
+
     /**
      * 根据用户账号获取用户信息
      *
