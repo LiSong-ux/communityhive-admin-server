@@ -36,4 +36,14 @@ public class TopicController {
         return UnifiedResult.ok(map);
     }
 
+    @RequestMapping("/deleteTopic")
+    @ResponseBody
+    public UnifiedResult deleteTopic(Integer id) {
+        if (id == null) {
+            return UnifiedResult.build(400, "请指定帖子ID", null);
+        }
+        UnifiedResult result = topicService.deleteTopic(id);
+        return result;
+    }
+
 }
