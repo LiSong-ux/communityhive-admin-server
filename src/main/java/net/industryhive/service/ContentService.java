@@ -1,5 +1,6 @@
 package net.industryhive.service;
 
+import net.industryhive.bean.Reply;
 import net.industryhive.bean.ReplyExample;
 import net.industryhive.bean.Topic;
 import net.industryhive.bean.TopicExample;
@@ -70,6 +71,7 @@ public class ContentService {
 
     /**
      * 根据帖子ID获取该帖子的回复数量
+     *
      * @param topicId
      * @return
      */
@@ -110,4 +112,22 @@ public class ContentService {
         return UnifiedResult.ok();
     }
 
+    /**
+     * 根据id删除回复
+     *
+     * @param id
+     * @return
+     */
+    public UnifiedResult deleteReply(int id) {
+        Reply reply = replyMapper.selectByPrimaryKey(id);
+        if (reply == null) {
+            return UnifiedResult.build(400, "回复不存在", null);
+        }
+        if (reply.getDeleted() == true) {
+            return UnifiedResult.build(400, "该回复已被删除", null);
+        }
+        reply.setDeleted(true);
+        replyMapper.updateByPrimaryKeySelective(reply);
+        return UnifiedResult.ok();
+    }
 }

@@ -18,7 +18,7 @@ import java.util.Map;
  * @create 2019-12-25 15:51
  */
 @Controller
-public class TopicController {
+public class ContentController {
 
     @Autowired
     private ContentService contentService;
@@ -66,6 +66,16 @@ public class TopicController {
             return UnifiedResult.build(400, "请指定帖子ID", null);
         }
         UnifiedResult result = contentService.deleteTopic(id);
+        return result;
+    }
+
+    @RequestMapping("/deleteReply")
+    @ResponseBody
+    public UnifiedResult deleteReply(Integer id) {
+        if (id == null) {
+            return UnifiedResult.build(400, "请指定回复ID", null);
+        }
+        UnifiedResult result = contentService.deleteReply(id);
         return result;
     }
 
