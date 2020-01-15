@@ -40,4 +40,6 @@ public interface TopicMapper {
 
     List<WrapTopic> findListWithUsername(int startRow);
 
+    WrapTopic findWithUsername(int id);
+
 }

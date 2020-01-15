@@ -369,5 +369,8 @@
         WHERE lastSubmit=reply.submitTime AND reply.user_id=user.id) b
         ON a.id=b.rti ORDER BY lastSubmit DESC limit #{startRow},100
     </select>
+  <select id="findWithUsername" parameterType="java.lang.Integer" resultType="net.industryhive.been.wrap.WrapTopic">
+        select topic.*,user.username from topic,user where topic.id=#{id} and topic.user_id=user.id
+  </select>
   <!--===============================================================================================================-->
 </mapper>

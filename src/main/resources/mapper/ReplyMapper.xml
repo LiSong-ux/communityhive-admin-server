@@ -108,7 +108,7 @@
     </if>
   </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
-    select 
+    select
     <include refid="Base_Column_List" />
     ,
     <include refid="Blob_Column_List" />
@@ -126,11 +126,11 @@
     </if>
   </delete>
   <insert id="insert" parameterType="net.industryhive.bean.Reply">
-    insert into reply (id, topic_id, user_id, 
-      submitTime, floor, quote, 
+    insert into reply (id, topic_id, user_id,
+      submitTime, floor, quote,
       deleted, content)
-    values (#{id,jdbcType=INTEGER}, #{topicId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, 
-      #{submittime,jdbcType=TIMESTAMP}, #{floor,jdbcType=INTEGER}, #{quote,jdbcType=INTEGER}, 
+    values (#{id,jdbcType=INTEGER}, #{topicId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER},
+      #{submittime,jdbcType=TIMESTAMP}, #{floor,jdbcType=INTEGER}, #{quote,jdbcType=INTEGER},
       #{deleted,jdbcType=BIT}, #{content,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="net.industryhive.bean.Reply">
@@ -301,4 +301,13 @@
       deleted = #{deleted,jdbcType=BIT}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <!--========================================================================================-->
+  <resultMap extends="ResultMapWithBLOBs" id="ResultMapWithUsername" type="net.industryhive.been.wrap.WrapReply">
+    <result column="username" jdbcType="VARCHAR" property="username"/>
+  </resultMap>
+  <select id="findWithUsername" resultMap="ResultMapWithUsername">
+      select reply.*,user.username from reply,user
+      where reply.topic_id=#{id} and reply.user_id=user.id limit #{startRow},50
+  </select>
+  <!--========================================================================================-->
 </mapper>
