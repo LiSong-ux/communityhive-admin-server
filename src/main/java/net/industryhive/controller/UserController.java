@@ -43,7 +43,7 @@ public class UserController {
         }
 
         String account = request.getParameter("account");
-        if (account != "LiSong-ux") {
+        if (!account.equals("LiSong-ux")) {
             return UnifiedResult.build(400, "账号或密码错误", null);
         }
 
@@ -77,11 +77,7 @@ public class UserController {
 
     @RequestMapping("/allUser")
     @ResponseBody
-    public UnifiedResult getAllUser(HttpServletRequest request, Integer page) {
-//        User admin = (User) request.getSession().getAttribute("admin");
-//        if (admin == null) {
-//            return UnifiedResult.build(400, "您还未登录，请先登录", null);
-//        }
+    public UnifiedResult getAllUser(Integer page) {
         if (page == null) {
             page = 1;
         }

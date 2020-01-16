@@ -29,12 +29,13 @@
     <mvc:annotation-driven/>
 
     <!--配置拦截器-->
-    <!--<mvc:interceptors>
+    <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/**"/>
-            <bean class="net.industryhive.interceptor.AccessInterceptor"/>
+            <mvc:exclude-mapping path="/login"/>
+            <bean class="net.industryhive.interceptor.LoginInterceptor"/>
         </mvc:interceptor>
-    </mvc:interceptors>-->
+    </mvc:interceptors>
 
     <!--任务调度器-->
     <task:scheduler id="scheduler" pool-size="10"/>
