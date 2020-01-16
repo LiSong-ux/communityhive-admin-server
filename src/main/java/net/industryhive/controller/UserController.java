@@ -75,6 +75,13 @@ public class UserController {
         return UnifiedResult.ok(admin);
     }
 
+    @RequestMapping("/logout")
+    @ResponseBody
+    public UnifiedResult logout(HttpSession session) {
+        session.removeAttribute("admin");
+        return UnifiedResult.ok();
+    }
+
     @RequestMapping("/allUser")
     @ResponseBody
     public UnifiedResult getAllUser(Integer page) {
@@ -83,9 +90,9 @@ public class UserController {
         }
         List<User> userList = userService.getAllUser(page);
         long userCount = userService.getUserCount();
-        Map<String,Object> map = new HashMap<>();
-        map.put("userList",userList);
-        map.put("userCount",userCount);
+        Map<String, Object> map = new HashMap<>();
+        map.put("userList", userList);
+        map.put("userCount", userCount);
         return UnifiedResult.ok(map);
     }
 
