@@ -3,19 +3,19 @@ package net.industryhive.bean;
 public class Authority {
     private Integer id;
 
-    private Boolean banaccount;
+    private Boolean banAccount;
 
-    private Boolean bansubmittopic;
+    private Boolean banSubmitTopic;
 
-    private Boolean bansubmitreply;
+    private Boolean banSubmitReply;
 
-    private Boolean banmessage;
+    private Boolean banMessage;
 
-    private Boolean deletetopic;
+    private Boolean deleteTopic;
 
-    private Boolean deletereply;
+    private Boolean deleteReply;
 
-    private Boolean locktopic;
+    private Boolean lockTopic;
 
     public Integer getId() {
         return id;
@@ -25,59 +25,59 @@ public class Authority {
         this.id = id;
     }
 
-    public Boolean getBanaccount() {
-        return banaccount;
+    public Boolean getBanAccount() {
+        return banAccount;
     }
 
-    public void setBanaccount(Boolean banaccount) {
-        this.banaccount = banaccount;
+    public void setBanAccount(Boolean banAccount) {
+        this.banAccount = banAccount;
     }
 
-    public Boolean getBansubmittopic() {
-        return bansubmittopic;
+    public Boolean getBanSubmitTopic() {
+        return banSubmitTopic;
     }
 
-    public void setBansubmittopic(Boolean bansubmittopic) {
-        this.bansubmittopic = bansubmittopic;
+    public void setBanSubmitTopic(Boolean banSubmitTopic) {
+        this.banSubmitTopic = banSubmitTopic;
     }
 
-    public Boolean getBansubmitreply() {
-        return bansubmitreply;
+    public Boolean getBanSubmitReply() {
+        return banSubmitReply;
     }
 
-    public void setBansubmitreply(Boolean bansubmitreply) {
-        this.bansubmitreply = bansubmitreply;
+    public void setBanSubmitReply(Boolean banSubmitReply) {
+        this.banSubmitReply = banSubmitReply;
     }
 
-    public Boolean getBanmessage() {
-        return banmessage;
+    public Boolean getBanMessage() {
+        return banMessage;
     }
 
-    public void setBanmessage(Boolean banmessage) {
-        this.banmessage = banmessage;
+    public void setBanMessage(Boolean banMessage) {
+        this.banMessage = banMessage;
     }
 
-    public Boolean getDeletetopic() {
-        return deletetopic;
+    public Boolean getDeleteTopic() {
+        return deleteTopic;
     }
 
-    public void setDeletetopic(Boolean deletetopic) {
-        this.deletetopic = deletetopic;
+    public void setDeleteTopic(Boolean deleteTopic) {
+        this.deleteTopic = deleteTopic;
     }
 
-    public Boolean getDeletereply() {
-        return deletereply;
+    public Boolean getDeleteReply() {
+        return deleteReply;
     }
 
-    public void setDeletereply(Boolean deletereply) {
-        this.deletereply = deletereply;
+    public void setDeleteReply(Boolean deleteReply) {
+        this.deleteReply = deleteReply;
     }
 
-    public Boolean getLocktopic() {
-        return locktopic;
+    public Boolean getLockTopic() {
+        return lockTopic;
     }
 
-    public void setLocktopic(Boolean locktopic) {
-        this.locktopic = locktopic;
+    public void setLockTopic(Boolean lockTopic) {
+        this.lockTopic = lockTopic;
     }
 }

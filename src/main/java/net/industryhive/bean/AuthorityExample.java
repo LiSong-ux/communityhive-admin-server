@@ -164,423 +164,423 @@ public class AuthorityExample {
             return (Criteria) this;
         }
 
-        public Criteria andBanaccountIsNull() {
+        public Criteria andBanAccountIsNull() {
             addCriterion("banAccount is null");
             return (Criteria) this;
         }
 
-        public Criteria andBanaccountIsNotNull() {
+        public Criteria andBanAccountIsNotNull() {
             addCriterion("banAccount is not null");
             return (Criteria) this;
         }
 
-        public Criteria andBanaccountEqualTo(Boolean value) {
-            addCriterion("banAccount =", value, "banaccount");
+        public Criteria andBanAccountEqualTo(Boolean value) {
+            addCriterion("banAccount =", value, "banAccount");
             return (Criteria) this;
         }
 
-        public Criteria andBanaccountNotEqualTo(Boolean value) {
-            addCriterion("banAccount <>", value, "banaccount");
+        public Criteria andBanAccountNotEqualTo(Boolean value) {
+            addCriterion("banAccount <>", value, "banAccount");
             return (Criteria) this;
         }
 
-        public Criteria andBanaccountGreaterThan(Boolean value) {
-            addCriterion("banAccount >", value, "banaccount");
+        public Criteria andBanAccountGreaterThan(Boolean value) {
+            addCriterion("banAccount >", value, "banAccount");
             return (Criteria) this;
         }
 
-        public Criteria andBanaccountGreaterThanOrEqualTo(Boolean value) {
-            addCriterion("banAccount >=", value, "banaccount");
+        public Criteria andBanAccountGreaterThanOrEqualTo(Boolean value) {
+            addCriterion("banAccount >=", value, "banAccount");
             return (Criteria) this;
         }
 
-        public Criteria andBanaccountLessThan(Boolean value) {
-            addCriterion("banAccount <", value, "banaccount");
+        public Criteria andBanAccountLessThan(Boolean value) {
+            addCriterion("banAccount <", value, "banAccount");
             return (Criteria) this;
         }
 
-        public Criteria andBanaccountLessThanOrEqualTo(Boolean value) {
-            addCriterion("banAccount <=", value, "banaccount");
+        public Criteria andBanAccountLessThanOrEqualTo(Boolean value) {
+            addCriterion("banAccount <=", value, "banAccount");
             return (Criteria) this;
         }
 
-        public Criteria andBanaccountIn(List<Boolean> values) {
-            addCriterion("banAccount in", values, "banaccount");
+        public Criteria andBanAccountIn(List<Boolean> values) {
+            addCriterion("banAccount in", values, "banAccount");
             return (Criteria) this;
         }
 
-        public Criteria andBanaccountNotIn(List<Boolean> values) {
-            addCriterion("banAccount not in", values, "banaccount");
+        public Criteria andBanAccountNotIn(List<Boolean> values) {
+            addCriterion("banAccount not in", values, "banAccount");
             return (Criteria) this;
         }
 
-        public Criteria andBanaccountBetween(Boolean value1, Boolean value2) {
-            addCriterion("banAccount between", value1, value2, "banaccount");
+        public Criteria andBanAccountBetween(Boolean value1, Boolean value2) {
+            addCriterion("banAccount between", value1, value2, "banAccount");
             return (Criteria) this;
         }
 
-        public Criteria andBanaccountNotBetween(Boolean value1, Boolean value2) {
-            addCriterion("banAccount not between", value1, value2, "banaccount");
+        public Criteria andBanAccountNotBetween(Boolean value1, Boolean value2) {
+            addCriterion("banAccount not between", value1, value2, "banAccount");
             return (Criteria) this;
         }
 
-        public Criteria andBansubmittopicIsNull() {
+        public Criteria andBanSubmitTopicIsNull() {
             addCriterion("banSubmitTopic is null");
             return (Criteria) this;
         }
 
-        public Criteria andBansubmittopicIsNotNull() {
+        public Criteria andBanSubmitTopicIsNotNull() {
             addCriterion("banSubmitTopic is not null");
             return (Criteria) this;
         }
 
-        public Criteria andBansubmittopicEqualTo(Boolean value) {
-            addCriterion("banSubmitTopic =", value, "bansubmittopic");
+        public Criteria andBanSubmitTopicEqualTo(Boolean value) {
+            addCriterion("banSubmitTopic =", value, "banSubmitTopic");
             return (Criteria) this;
         }
 
-        public Criteria andBansubmittopicNotEqualTo(Boolean value) {
-            addCriterion("banSubmitTopic <>", value, "bansubmittopic");
+        public Criteria andBanSubmitTopicNotEqualTo(Boolean value) {
+            addCriterion("banSubmitTopic <>", value, "banSubmitTopic");
             return (Criteria) this;
         }
 
-        public Criteria andBansubmittopicGreaterThan(Boolean value) {
-            addCriterion("banSubmitTopic >", value, "bansubmittopic");
+        public Criteria andBanSubmitTopicGreaterThan(Boolean value) {
+            addCriterion("banSubmitTopic >", value, "banSubmitTopic");
             return (Criteria) this;
         }
 
-        public Criteria andBansubmittopicGreaterThanOrEqualTo(Boolean value) {
-            addCriterion("banSubmitTopic >=", value, "bansubmittopic");
+        public Criteria andBanSubmitTopicGreaterThanOrEqualTo(Boolean value) {
+            addCriterion("banSubmitTopic >=", value, "banSubmitTopic");
             return (Criteria) this;
         }
 
-        public Criteria andBansubmittopicLessThan(Boolean value) {
-            addCriterion("banSubmitTopic <", value, "bansubmittopic");
+        public Criteria andBanSubmitTopicLessThan(Boolean value) {
+            addCriterion("banSubmitTopic <", value, "banSubmitTopic");
             return (Criteria) this;
         }
 
-        public Criteria andBansubmittopicLessThanOrEqualTo(Boolean value) {
-            addCriterion("banSubmitTopic <=", value, "bansubmittopic");
+        public Criteria andBanSubmitTopicLessThanOrEqualTo(Boolean value) {
+            addCriterion("banSubmitTopic <=", value, "banSubmitTopic");
             return (Criteria) this;
         }
 
-        public Criteria andBansubmittopicIn(List<Boolean> values) {
-            addCriterion("banSubmitTopic in", values, "bansubmittopic");
+        public Criteria andBanSubmitTopicIn(List<Boolean> values) {
+            addCriterion("banSubmitTopic in", values, "banSubmitTopic");
             return (Criteria) this;
         }
 
-        public Criteria andBansubmittopicNotIn(List<Boolean> values) {
-            addCriterion("banSubmitTopic not in", values, "bansubmittopic");
+        public Criteria andBanSubmitTopicNotIn(List<Boolean> values) {
+            addCriterion("banSubmitTopic not in", values, "banSubmitTopic");
             return (Criteria) this;
         }
 
-        public Criteria andBansubmittopicBetween(Boolean value1, Boolean value2) {
-            addCriterion("banSubmitTopic between", value1, value2, "bansubmittopic");
+        public Criteria andBanSubmitTopicBetween(Boolean value1, Boolean value2) {
+            addCriterion("banSubmitTopic between", value1, value2, "banSubmitTopic");
             return (Criteria) this;
         }
 
-        public Criteria andBansubmittopicNotBetween(Boolean value1, Boolean value2) {
-            addCriterion("banSubmitTopic not between", value1, value2, "bansubmittopic");
+        public Criteria andBanSubmitTopicNotBetween(Boolean value1, Boolean value2) {
+            addCriterion("banSubmitTopic not between", value1, value2, "banSubmitTopic");
             return (Criteria) this;
         }
 
-        public Criteria andBansubmitreplyIsNull() {
+        public Criteria andBanSubmitReplyIsNull() {
             addCriterion("banSubmitReply is null");
             return (Criteria) this;
         }
 
-        public Criteria andBansubmitreplyIsNotNull() {
+        public Criteria andBanSubmitReplyIsNotNull() {
             addCriterion("banSubmitReply is not null");
             return (Criteria) this;
         }
 
-        public Criteria andBansubmitreplyEqualTo(Boolean value) {
-            addCriterion("banSubmitReply =", value, "bansubmitreply");
+        public Criteria andBanSubmitReplyEqualTo(Boolean value) {
+            addCriterion("banSubmitReply =", value, "banSubmitReply");
             return (Criteria) this;
         }
 
-        public Criteria andBansubmitreplyNotEqualTo(Boolean value) {
-            addCriterion("banSubmitReply <>", value, "bansubmitreply");
+        public Criteria andBanSubmitReplyNotEqualTo(Boolean value) {
+            addCriterion("banSubmitReply <>", value, "banSubmitReply");
             return (Criteria) this;
         }
 
-        public Criteria andBansubmitreplyGreaterThan(Boolean value) {
-            addCriterion("banSubmitReply >", value, "bansubmitreply");
+        public Criteria andBanSubmitReplyGreaterThan(Boolean value) {
+            addCriterion("banSubmitReply >", value, "banSubmitReply");
             return (Criteria) this;
         }
 
-        public Criteria andBansubmitreplyGreaterThanOrEqualTo(Boolean value) {
-            addCriterion("banSubmitReply >=", value, "bansubmitreply");
+        public Criteria andBanSubmitReplyGreaterThanOrEqualTo(Boolean value) {
+            addCriterion("banSubmitReply >=", value, "banSubmitReply");
             return (Criteria) this;
         }
 
-        public Criteria andBansubmitreplyLessThan(Boolean value) {
-            addCriterion("banSubmitReply <", value, "bansubmitreply");
+        public Criteria andBanSubmitReplyLessThan(Boolean value) {
+            addCriterion("banSubmitReply <", value, "banSubmitReply");
             return (Criteria) this;
         }
 
-        public Criteria andBansubmitreplyLessThanOrEqualTo(Boolean value) {
-            addCriterion("banSubmitReply <=", value, "bansubmitreply");
+        public Criteria andBanSubmitReplyLessThanOrEqualTo(Boolean value) {
+            addCriterion("banSubmitReply <=", value, "banSubmitReply");
             return (Criteria) this;
         }
 
-        public Criteria andBansubmitreplyIn(List<Boolean> values) {
-            addCriterion("banSubmitReply in", values, "bansubmitreply");
+        public Criteria andBanSubmitReplyIn(List<Boolean> values) {
+            addCriterion("banSubmitReply in", values, "banSubmitReply");
             return (Criteria) this;
         }
 
-        public Criteria andBansubmitreplyNotIn(List<Boolean> values) {
-            addCriterion("banSubmitReply not in", values, "bansubmitreply");
+        public Criteria andBanSubmitReplyNotIn(List<Boolean> values) {
+            addCriterion("banSubmitReply not in", values, "banSubmitReply");
             return (Criteria) this;
         }
 
-        public Criteria andBansubmitreplyBetween(Boolean value1, Boolean value2) {
-            addCriterion("banSubmitReply between", value1, value2, "bansubmitreply");
+        public Criteria andBanSubmitReplyBetween(Boolean value1, Boolean value2) {
+            addCriterion("banSubmitReply between", value1, value2, "banSubmitReply");
             return (Criteria) this;
         }
 
-        public Criteria andBansubmitreplyNotBetween(Boolean value1, Boolean value2) {
-            addCriterion("banSubmitReply not between", value1, value2, "bansubmitreply");
+        public Criteria andBanSubmitReplyNotBetween(Boolean value1, Boolean value2) {
+            addCriterion("banSubmitReply not between", value1, value2, "banSubmitReply");
             return (Criteria) this;
         }
 
-        public Criteria andBanmessageIsNull() {
+        public Criteria andBanMessageIsNull() {
             addCriterion("banMessage is null");
             return (Criteria) this;
         }
 
-        public Criteria andBanmessageIsNotNull() {
+        public Criteria andBanMessageIsNotNull() {
             addCriterion("banMessage is not null");
             return (Criteria) this;
         }
 
-        public Criteria andBanmessageEqualTo(Boolean value) {
-            addCriterion("banMessage =", value, "banmessage");
+        public Criteria andBanMessageEqualTo(Boolean value) {
+            addCriterion("banMessage =", value, "banMessage");
             return (Criteria) this;
         }
 
-        public Criteria andBanmessageNotEqualTo(Boolean value) {
-            addCriterion("banMessage <>", value, "banmessage");
+        public Criteria andBanMessageNotEqualTo(Boolean value) {
+            addCriterion("banMessage <>", value, "banMessage");
             return (Criteria) this;
         }
 
-        public Criteria andBanmessageGreaterThan(Boolean value) {
-            addCriterion("banMessage >", value, "banmessage");
+        public Criteria andBanMessageGreaterThan(Boolean value) {
+            addCriterion("banMessage >", value, "banMessage");
             return (Criteria) this;
         }
 
-        public Criteria andBanmessageGreaterThanOrEqualTo(Boolean value) {
-            addCriterion("banMessage >=", value, "banmessage");
+        public Criteria andBanMessageGreaterThanOrEqualTo(Boolean value) {
+            addCriterion("banMessage >=", value, "banMessage");
             return (Criteria) this;
         }
 
-        public Criteria andBanmessageLessThan(Boolean value) {
-            addCriterion("banMessage <", value, "banmessage");
+        public Criteria andBanMessageLessThan(Boolean value) {
+            addCriterion("banMessage <", value, "banMessage");
             return (Criteria) this;
         }
 
-        public Criteria andBanmessageLessThanOrEqualTo(Boolean value) {
-            addCriterion("banMessage <=", value, "banmessage");
+        public Criteria andBanMessageLessThanOrEqualTo(Boolean value) {
+            addCriterion("banMessage <=", value, "banMessage");
             return (Criteria) this;
         }
 
-        public Criteria andBanmessageIn(List<Boolean> values) {
-            addCriterion("banMessage in", values, "banmessage");
+        public Criteria andBanMessageIn(List<Boolean> values) {
+            addCriterion("banMessage in", values, "banMessage");
             return (Criteria) this;
         }
 
-        public Criteria andBanmessageNotIn(List<Boolean> values) {
-            addCriterion("banMessage not in", values, "banmessage");
+        public Criteria andBanMessageNotIn(List<Boolean> values) {
+            addCriterion("banMessage not in", values, "banMessage");
             return (Criteria) this;
         }
 
-        public Criteria andBanmessageBetween(Boolean value1, Boolean value2) {
-            addCriterion("banMessage between", value1, value2, "banmessage");
+        public Criteria andBanMessageBetween(Boolean value1, Boolean value2) {
+            addCriterion("banMessage between", value1, value2, "banMessage");
             return (Criteria) this;
         }
 
-        public Criteria andBanmessageNotBetween(Boolean value1, Boolean value2) {
-            addCriterion("banMessage not between", value1, value2, "banmessage");
+        public Criteria andBanMessageNotBetween(Boolean value1, Boolean value2) {
+            addCriterion("banMessage not between", value1, value2, "banMessage");
             return (Criteria) this;
         }
 
-        public Criteria andDeletetopicIsNull() {
+        public Criteria andDeleteTopicIsNull() {
             addCriterion("deleteTopic is null");
             return (Criteria) this;
         }
 
-        public Criteria andDeletetopicIsNotNull() {
+        public Criteria andDeleteTopicIsNotNull() {
             addCriterion("deleteTopic is not null");
             return (Criteria) this;
         }
 
-        public Criteria andDeletetopicEqualTo(Boolean value) {
-            addCriterion("deleteTopic =", value, "deletetopic");
+        public Criteria andDeleteTopicEqualTo(Boolean value) {
+            addCriterion("deleteTopic =", value, "deleteTopic");
             return (Criteria) this;
         }
 
-        public Criteria andDeletetopicNotEqualTo(Boolean value) {
-            addCriterion("deleteTopic <>", value, "deletetopic");
+        public Criteria andDeleteTopicNotEqualTo(Boolean value) {
+            addCriterion("deleteTopic <>", value, "deleteTopic");
             return (Criteria) this;
         }
 
-        public Criteria andDeletetopicGreaterThan(Boolean value) {
-            addCriterion("deleteTopic >", value, "deletetopic");
+        public Criteria andDeleteTopicGreaterThan(Boolean value) {
+            addCriterion("deleteTopic >", value, "deleteTopic");
             return (Criteria) this;
         }
 
-        public Criteria andDeletetopicGreaterThanOrEqualTo(Boolean value) {
-            addCriterion("deleteTopic >=", value, "deletetopic");
+        public Criteria andDeleteTopicGreaterThanOrEqualTo(Boolean value) {
+            addCriterion("deleteTopic >=", value, "deleteTopic");
             return (Criteria) this;
         }
 
-        public Criteria andDeletetopicLessThan(Boolean value) {
-            addCriterion("deleteTopic <", value, "deletetopic");
+        public Criteria andDeleteTopicLessThan(Boolean value) {
+            addCriterion("deleteTopic <", value, "deleteTopic");
             return (Criteria) this;
         }
 
-        public Criteria andDeletetopicLessThanOrEqualTo(Boolean value) {
-            addCriterion("deleteTopic <=", value, "deletetopic");
+        public Criteria andDeleteTopicLessThanOrEqualTo(Boolean value) {
+            addCriterion("deleteTopic <=", value, "deleteTopic");
             return (Criteria) this;
         }
 
-        public Criteria andDeletetopicIn(List<Boolean> values) {
-            addCriterion("deleteTopic in", values, "deletetopic");
+        public Criteria andDeleteTopicIn(List<Boolean> values) {
+            addCriterion("deleteTopic in", values, "deleteTopic");
             return (Criteria) this;
         }
 
-        public Criteria andDeletetopicNotIn(List<Boolean> values) {
-            addCriterion("deleteTopic not in", values, "deletetopic");
+        public Criteria andDeleteTopicNotIn(List<Boolean> values) {
+            addCriterion("deleteTopic not in", values, "deleteTopic");
             return (Criteria) this;
         }
 
-        public Criteria andDeletetopicBetween(Boolean value1, Boolean value2) {
-            addCriterion("deleteTopic between", value1, value2, "deletetopic");
+        public Criteria andDeleteTopicBetween(Boolean value1, Boolean value2) {
+            addCriterion("deleteTopic between", value1, value2, "deleteTopic");
             return (Criteria) this;
         }
 
-        public Criteria andDeletetopicNotBetween(Boolean value1, Boolean value2) {
-            addCriterion("deleteTopic not between", value1, value2, "deletetopic");
+        public Criteria andDeleteTopicNotBetween(Boolean value1, Boolean value2) {
+            addCriterion("deleteTopic not between", value1, value2, "deleteTopic");
             return (Criteria) this;
         }
 
-        public Criteria andDeletereplyIsNull() {
+        public Criteria andDeleteReplyIsNull() {
             addCriterion("deleteReply is null");
             return (Criteria) this;
         }
 
-        public Criteria andDeletereplyIsNotNull() {
+        public Criteria andDeleteReplyIsNotNull() {
             addCriterion("deleteReply is not null");
             return (Criteria) this;
         }
 
-        public Criteria andDeletereplyEqualTo(Boolean value) {
-            addCriterion("deleteReply =", value, "deletereply");
+        public Criteria andDeleteReplyEqualTo(Boolean value) {
+            addCriterion("deleteReply =", value, "deleteReply");
             return (Criteria) this;
         }
 
-        public Criteria andDeletereplyNotEqualTo(Boolean value) {
-            addCriterion("deleteReply <>", value, "deletereply");
+        public Criteria andDeleteReplyNotEqualTo(Boolean value) {
+            addCriterion("deleteReply <>", value, "deleteReply");
             return (Criteria) this;
         }
 
-        public Criteria andDeletereplyGreaterThan(Boolean value) {
-            addCriterion("deleteReply >", value, "deletereply");
+        public Criteria andDeleteReplyGreaterThan(Boolean value) {
+            addCriterion("deleteReply >", value, "deleteReply");
             return (Criteria) this;
         }
 
-        public Criteria andDeletereplyGreaterThanOrEqualTo(Boolean value) {
-            addCriterion("deleteReply >=", value, "deletereply");
+        public Criteria andDeleteReplyGreaterThanOrEqualTo(Boolean value) {
+            addCriterion("deleteReply >=", value, "deleteReply");
             return (Criteria) this;
         }
 
-        public Criteria andDeletereplyLessThan(Boolean value) {
-            addCriterion("deleteReply <", value, "deletereply");
+        public Criteria andDeleteReplyLessThan(Boolean value) {
+            addCriterion("deleteReply <", value, "deleteReply");
             return (Criteria) this;
         }
 
-        public Criteria andDeletereplyLessThanOrEqualTo(Boolean value) {
-            addCriterion("deleteReply <=", value, "deletereply");
+        public Criteria andDeleteReplyLessThanOrEqualTo(Boolean value) {
+            addCriterion("deleteReply <=", value, "deleteReply");
             return (Criteria) this;
         }
 
-        public Criteria andDeletereplyIn(List<Boolean> values) {
-            addCriterion("deleteReply in", values, "deletereply");
+        public Criteria andDeleteReplyIn(List<Boolean> values) {
+            addCriterion("deleteReply in", values, "deleteReply");
             return (Criteria) this;
         }
 
-        public Criteria andDeletereplyNotIn(List<Boolean> values) {
-            addCriterion("deleteReply not in", values, "deletereply");
+        public Criteria andDeleteReplyNotIn(List<Boolean> values) {
+            addCriterion("deleteReply not in", values, "deleteReply");
             return (Criteria) this;
         }
 
-        public Criteria andDeletereplyBetween(Boolean value1, Boolean value2) {
-            addCriterion("deleteReply between", value1, value2, "deletereply");
+        public Criteria andDeleteReplyBetween(Boolean value1, Boolean value2) {
+            addCriterion("deleteReply between", value1, value2, "deleteReply");
             return (Criteria) this;
         }
 
-        public Criteria andDeletereplyNotBetween(Boolean value1, Boolean value2) {
-            addCriterion("deleteReply not between", value1, value2, "deletereply");
+        public Criteria andDeleteReplyNotBetween(Boolean value1, Boolean value2) {
+            addCriterion("deleteReply not between", value1, value2, "deleteReply");
             return (Criteria) this;
         }
 
-        public Criteria andLocktopicIsNull() {
+        public Criteria andLockTopicIsNull() {
             addCriterion("lockTopic is null");
             return (Criteria) this;
         }
 
-        public Criteria andLocktopicIsNotNull() {
+        public Criteria andLockTopicIsNotNull() {
             addCriterion("lockTopic is not null");
             return (Criteria) this;
         }
 
-        public Criteria andLocktopicEqualTo(Boolean value) {
-            addCriterion("lockTopic =", value, "locktopic");
+        public Criteria andLockTopicEqualTo(Boolean value) {
+            addCriterion("lockTopic =", value, "lockTopic");
             return (Criteria) this;
         }
 
-        public Criteria andLocktopicNotEqualTo(Boolean value) {
-            addCriterion("lockTopic <>", value, "locktopic");
+        public Criteria andLockTopicNotEqualTo(Boolean value) {
+            addCriterion("lockTopic <>", value, "lockTopic");
             return (Criteria) this;
         }
 
-        public Criteria andLocktopicGreaterThan(Boolean value) {
-            addCriterion("lockTopic >", value, "locktopic");
+        public Criteria andLockTopicGreaterThan(Boolean value) {
+            addCriterion("lockTopic >", value, "lockTopic");
             return (Criteria) this;
         }
 
-        public Criteria andLocktopicGreaterThanOrEqualTo(Boolean value) {
-            addCriterion("lockTopic >=", value, "locktopic");
+        public Criteria andLockTopicGreaterThanOrEqualTo(Boolean value) {
+            addCriterion("lockTopic >=", value, "lockTopic");
             return (Criteria) this;
         }
 
-        public Criteria andLocktopicLessThan(Boolean value) {
-            addCriterion("lockTopic <", value, "locktopic");
+        public Criteria andLockTopicLessThan(Boolean value) {
+            addCriterion("lockTopic <", value, "lockTopic");
             return (Criteria) this;
         }
 
-        public Criteria andLocktopicLessThanOrEqualTo(Boolean value) {
-            addCriterion("lockTopic <=", value, "locktopic");
+        public Criteria andLockTopicLessThanOrEqualTo(Boolean value) {
+            addCriterion("lockTopic <=", value, "lockTopic");
             return (Criteria) this;
         }
 
-        public Criteria andLocktopicIn(List<Boolean> values) {
-            addCriterion("lockTopic in", values, "locktopic");
+        public Criteria andLockTopicIn(List<Boolean> values) {
+            addCriterion("lockTopic in", values, "lockTopic");
             return (Criteria) this;
         }
 
-        public Criteria andLocktopicNotIn(List<Boolean> values) {
-            addCriterion("lockTopic not in", values, "locktopic");
+        public Criteria andLockTopicNotIn(List<Boolean> values) {
+            addCriterion("lockTopic not in", values, "lockTopic");
             return (Criteria) this;
         }
 
-        public Criteria andLocktopicBetween(Boolean value1, Boolean value2) {
-            addCriterion("lockTopic between", value1, value2, "locktopic");
+        public Criteria andLockTopicBetween(Boolean value1, Boolean value2) {
+            addCriterion("lockTopic between", value1, value2, "lockTopic");
             return (Criteria) this;
         }
 
-        public Criteria andLocktopicNotBetween(Boolean value1, Boolean value2) {
-            addCriterion("lockTopic not between", value1, value2, "locktopic");
+        public Criteria andLockTopicNotBetween(Boolean value1, Boolean value2) {
+            addCriterion("lockTopic not between", value1, value2, "lockTopic");
             return (Criteria) this;
         }
     }
