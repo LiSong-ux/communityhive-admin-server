@@ -1,7 +1,7 @@
 package net.industryhive.controller;
 
-import net.industryhive.been.wrap.WrapReply;
-import net.industryhive.been.wrap.WrapTopic;
+import net.industryhive.bean.wrap.WrapReply;
+import net.industryhive.bean.wrap.WrapTopic;
 import net.industryhive.entity.UnifiedResult;
 import net.industryhive.service.ContentService;
 import org.springframework.beans.factory.annotation.Autowired;

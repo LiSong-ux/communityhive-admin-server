@@ -302,7 +302,7 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
   <!--========================================================================================-->
-  <resultMap extends="ResultMapWithBLOBs" id="ResultMapWithUsername" type="net.industryhive.been.wrap.WrapReply">
+  <resultMap extends="ResultMapWithBLOBs" id="ResultMapWithUsername" type="net.industryhive.bean.wrap.WrapReply">
     <result column="username" jdbcType="VARCHAR" property="username"/>
   </resultMap>
   <select id="findWithUsername" resultMap="ResultMapWithUsername">

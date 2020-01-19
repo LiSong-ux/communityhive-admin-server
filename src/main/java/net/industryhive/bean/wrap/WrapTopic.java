@@ -1,4 +1,4 @@
-package net.industryhive.been.wrap;
+package net.industryhive.bean.wrap;
 
 import net.industryhive.bean.Topic;
 

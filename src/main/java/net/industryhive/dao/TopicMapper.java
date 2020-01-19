@@ -2,7 +2,7 @@ package net.industryhive.dao;
 
 import net.industryhive.bean.Topic;
 import net.industryhive.bean.TopicExample;
-import net.industryhive.been.wrap.WrapTopic;
+import net.industryhive.bean.wrap.WrapTopic;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

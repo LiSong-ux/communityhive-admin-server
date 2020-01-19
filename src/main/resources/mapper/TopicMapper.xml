@@ -355,7 +355,7 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
   <!--===============================================================================================================-->
-  <resultMap extends="ResultMapWithBLOBs" id="ResultMapWithUsername" type="net.industryhive.been.wrap.WrapTopic">
+  <resultMap extends="ResultMapWithBLOBs" id="ResultMapWithUsername" type="net.industryhive.bean.wrap.WrapTopic">
     <result column="username" jdbcType="VARCHAR" property="username"></result>
     <result column="lastReply" jdbcType="VARCHAR" property="lastReply"></result>
     <result column="lastSubmit" jdbcType="TIMESTAMP" property="lastSubmit"></result>
@@ -369,7 +369,7 @@
         WHERE lastSubmit=reply.submitTime AND reply.user_id=user.id) b
         ON a.id=b.rti ORDER BY lastSubmit DESC limit #{startRow},100
     </select>
-  <select id="findWithUsername" parameterType="java.lang.Integer" resultType="net.industryhive.been.wrap.WrapTopic">
+  <select id="findWithUsername" parameterType="java.lang.Integer" resultType="net.industryhive.bean.wrap.WrapTopic">
         select topic.*,user.username from topic,user where topic.id=#{id} and topic.user_id=user.id
   </select>
   <!--===============================================================================================================-->
