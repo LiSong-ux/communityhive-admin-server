@@ -5,9 +5,13 @@ import java.util.Date;
 public class Notice {
     private Integer id;
 
-    private Integer userId;
+    private Integer user_id;
 
-    private Date submittime;
+    private Date submitTime;
+
+    private Integer lastUser_id;
+
+    private Date lastSubmitTime;
 
     private String label;
 
@@ -15,7 +19,7 @@ public class Notice {
 
     private Integer position;
 
-    private Integer viewcount;
+    private Integer viewCount;
 
     private Boolean locked;
 
@@ -33,20 +37,36 @@ public class Notice {
         this.id = id;
     }
 
-    public Integer getUserId() {
-        return userId;
+    public Integer getUser_id() {
+        return user_id;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setUser_id(Integer user_id) {
+        this.user_id = user_id;
     }
 
-    public Date getSubmittime() {
-        return submittime;
+    public Date getSubmitTime() {
+        return submitTime;
     }
 
-    public void setSubmittime(Date submittime) {
-        this.submittime = submittime;
+    public void setSubmitTime(Date submitTime) {
+        this.submitTime = submitTime;
+    }
+
+    public Integer getLastUser_id() {
+        return lastUser_id;
+    }
+
+    public void setLastUser_id(Integer lastUser_id) {
+        this.lastUser_id = lastUser_id;
+    }
+
+    public Date getLastSubmitTime() {
+        return lastSubmitTime;
+    }
+
+    public void setLastSubmitTime(Date lastSubmitTime) {
+        this.lastSubmitTime = lastSubmitTime;
     }
 
     public String getLabel() {
@@ -73,12 +93,12 @@ public class Notice {
         this.position = position;
     }
 
-    public Integer getViewcount() {
-        return viewcount;
+    public Integer getViewCount() {
+        return viewCount;
     }
 
-    public void setViewcount(Integer viewcount) {
-        this.viewcount = viewcount;
+    public void setViewCount(Integer viewCount) {
+        this.viewCount = viewCount;
     }
 
     public Boolean getLocked() {

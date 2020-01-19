@@ -3,12 +3,14 @@
 <mapper namespace="net.industryhive.dao.NoticeMapper">
   <resultMap id="BaseResultMap" type="net.industryhive.bean.Notice">
     <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="user_id" jdbcType="INTEGER" property="userId" />
-    <result column="submitTime" jdbcType="TIMESTAMP" property="submittime" />
+    <result column="user_id" jdbcType="INTEGER" property="user_id" />
+    <result column="submitTime" jdbcType="TIMESTAMP" property="submitTime" />
+    <result column="lastUser_id" jdbcType="INTEGER" property="lastUser_id" />
+    <result column="lastSubmitTime" jdbcType="TIMESTAMP" property="lastSubmitTime" />
     <result column="label" jdbcType="VARCHAR" property="label" />
     <result column="title" jdbcType="VARCHAR" property="title" />
     <result column="position" jdbcType="INTEGER" property="position" />
-    <result column="viewCount" jdbcType="INTEGER" property="viewcount" />
+    <result column="viewCount" jdbcType="INTEGER" property="viewCount" />
     <result column="locked" jdbcType="BIT" property="locked" />
     <result column="hided" jdbcType="BIT" property="hided" />
     <result column="deleted" jdbcType="BIT" property="deleted" />
@@ -75,7 +77,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, user_id, submitTime, label, title, position, viewCount, locked, hided, deleted
+    id, user_id, submitTime, lastUser_id, lastSubmitTime, label, title, position, viewCount, 
+    locked, hided, deleted
   </sql>
   <sql id="Blob_Column_List">
     content
@@ -130,13 +133,15 @@
   </delete>
   <insert id="insert" parameterType="net.industryhive.bean.Notice">
     insert into notice (id, user_id, submitTime, 
-      label, title, position, 
-      viewCount, locked, hided, deleted, 
-      content)
-    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{submittime,jdbcType=TIMESTAMP}, 
-      #{label,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{position,jdbcType=INTEGER}, 
-      #{viewcount,jdbcType=INTEGER}, #{locked,jdbcType=BIT}, #{hided,jdbcType=BIT}, #{deleted,jdbcType=BIT}, 
-      #{content,jdbcType=LONGVARCHAR})
+      lastUser_id, lastSubmitTime, label, 
+      title, position, viewCount, 
+      locked, hided, deleted, content
+      )
+    values (#{id,jdbcType=INTEGER}, #{user_id,jdbcType=INTEGER}, #{submitTime,jdbcType=TIMESTAMP}, 
+      #{lastUser_id,jdbcType=INTEGER}, #{lastSubmitTime,jdbcType=TIMESTAMP}, #{label,jdbcType=VARCHAR}, 
+      #{title,jdbcType=VARCHAR}, #{position,jdbcType=INTEGER}, #{viewCount,jdbcType=INTEGER}, 
+      #{locked,jdbcType=BIT}, #{hided,jdbcType=BIT}, #{deleted,jdbcType=BIT}, #{content,jdbcType=LONGVARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="net.industryhive.bean.Notice">
     insert into notice
@@ -144,11 +149,17 @@
       <if test="id != null">
         id,
       </if>
-      <if test="userId != null">
+      <if test="user_id != null">
         user_id,
       </if>
-      <if test="submittime != null">
+      <if test="submitTime != null">
         submitTime,
+      </if>
+      <if test="lastUser_id != null">
+        lastUser_id,
+      </if>
+      <if test="lastSubmitTime != null">
+        lastSubmitTime,
       </if>
       <if test="label != null">
         label,
@@ -159,7 +170,7 @@
       <if test="position != null">
         position,
       </if>
-      <if test="viewcount != null">
+      <if test="viewCount != null">
         viewCount,
       </if>
       <if test="locked != null">
@@ -179,11 +190,17 @@
       <if test="id != null">
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="userId != null">
-        #{userId,jdbcType=INTEGER},
+      <if test="user_id != null">
+        #{user_id,jdbcType=INTEGER},
       </if>
-      <if test="submittime != null">
-        #{submittime,jdbcType=TIMESTAMP},
+      <if test="submitTime != null">
+        #{submitTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUser_id != null">
+        #{lastUser_id,jdbcType=INTEGER},
+      </if>
+      <if test="lastSubmitTime != null">
+        #{lastSubmitTime,jdbcType=TIMESTAMP},
       </if>
       <if test="label != null">
         #{label,jdbcType=VARCHAR},
@@ -194,8 +211,8 @@
       <if test="position != null">
         #{position,jdbcType=INTEGER},
       </if>
-      <if test="viewcount != null">
-        #{viewcount,jdbcType=INTEGER},
+      <if test="viewCount != null">
+        #{viewCount,jdbcType=INTEGER},
       </if>
       <if test="locked != null">
         #{locked,jdbcType=BIT},
@@ -223,11 +240,17 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.userId != null">
-        user_id = #{record.userId,jdbcType=INTEGER},
+      <if test="record.user_id != null">
+        user_id = #{record.user_id,jdbcType=INTEGER},
       </if>
-      <if test="record.submittime != null">
-        submitTime = #{record.submittime,jdbcType=TIMESTAMP},
+      <if test="record.submitTime != null">
+        submitTime = #{record.submitTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.lastUser_id != null">
+        lastUser_id = #{record.lastUser_id,jdbcType=INTEGER},
+      </if>
+      <if test="record.lastSubmitTime != null">
+        lastSubmitTime = #{record.lastSubmitTime,jdbcType=TIMESTAMP},
       </if>
       <if test="record.label != null">
         label = #{record.label,jdbcType=VARCHAR},
@@ -238,8 +261,8 @@
       <if test="record.position != null">
         position = #{record.position,jdbcType=INTEGER},
       </if>
-      <if test="record.viewcount != null">
-        viewCount = #{record.viewcount,jdbcType=INTEGER},
+      <if test="record.viewCount != null">
+        viewCount = #{record.viewCount,jdbcType=INTEGER},
       </if>
       <if test="record.locked != null">
         locked = #{record.locked,jdbcType=BIT},
@@ -261,12 +284,14 @@
   <update id="updateByExampleWithBLOBs" parameterType="map">
     update notice
     set id = #{record.id,jdbcType=INTEGER},
-      user_id = #{record.userId,jdbcType=INTEGER},
-      submitTime = #{record.submittime,jdbcType=TIMESTAMP},
+      user_id = #{record.user_id,jdbcType=INTEGER},
+      submitTime = #{record.submitTime,jdbcType=TIMESTAMP},
+      lastUser_id = #{record.lastUser_id,jdbcType=INTEGER},
+      lastSubmitTime = #{record.lastSubmitTime,jdbcType=TIMESTAMP},
       label = #{record.label,jdbcType=VARCHAR},
       title = #{record.title,jdbcType=VARCHAR},
       position = #{record.position,jdbcType=INTEGER},
-      viewCount = #{record.viewcount,jdbcType=INTEGER},
+      viewCount = #{record.viewCount,jdbcType=INTEGER},
       locked = #{record.locked,jdbcType=BIT},
       hided = #{record.hided,jdbcType=BIT},
       deleted = #{record.deleted,jdbcType=BIT},
@@ -278,12 +303,14 @@
   <update id="updateByExample" parameterType="map">
     update notice
     set id = #{record.id,jdbcType=INTEGER},
-      user_id = #{record.userId,jdbcType=INTEGER},
-      submitTime = #{record.submittime,jdbcType=TIMESTAMP},
+      user_id = #{record.user_id,jdbcType=INTEGER},
+      submitTime = #{record.submitTime,jdbcType=TIMESTAMP},
+      lastUser_id = #{record.lastUser_id,jdbcType=INTEGER},
+      lastSubmitTime = #{record.lastSubmitTime,jdbcType=TIMESTAMP},
       label = #{record.label,jdbcType=VARCHAR},
       title = #{record.title,jdbcType=VARCHAR},
       position = #{record.position,jdbcType=INTEGER},
-      viewCount = #{record.viewcount,jdbcType=INTEGER},
+      viewCount = #{record.viewCount,jdbcType=INTEGER},
       locked = #{record.locked,jdbcType=BIT},
       hided = #{record.hided,jdbcType=BIT},
       deleted = #{record.deleted,jdbcType=BIT}
@@ -294,11 +321,17 @@
   <update id="updateByPrimaryKeySelective" parameterType="net.industryhive.bean.Notice">
     update notice
     <set>
-      <if test="userId != null">
-        user_id = #{userId,jdbcType=INTEGER},
+      <if test="user_id != null">
+        user_id = #{user_id,jdbcType=INTEGER},
       </if>
-      <if test="submittime != null">
-        submitTime = #{submittime,jdbcType=TIMESTAMP},
+      <if test="submitTime != null">
+        submitTime = #{submitTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUser_id != null">
+        lastUser_id = #{lastUser_id,jdbcType=INTEGER},
+      </if>
+      <if test="lastSubmitTime != null">
+        lastSubmitTime = #{lastSubmitTime,jdbcType=TIMESTAMP},
       </if>
       <if test="label != null">
         label = #{label,jdbcType=VARCHAR},
@@ -309,8 +342,8 @@
       <if test="position != null">
         position = #{position,jdbcType=INTEGER},
       </if>
-      <if test="viewcount != null">
-        viewCount = #{viewcount,jdbcType=INTEGER},
+      <if test="viewCount != null">
+        viewCount = #{viewCount,jdbcType=INTEGER},
       </if>
       <if test="locked != null">
         locked = #{locked,jdbcType=BIT},
@@ -329,12 +362,14 @@
   </update>
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="net.industryhive.bean.Notice">
     update notice
-    set user_id = #{userId,jdbcType=INTEGER},
-      submitTime = #{submittime,jdbcType=TIMESTAMP},
+    set user_id = #{user_id,jdbcType=INTEGER},
+      submitTime = #{submitTime,jdbcType=TIMESTAMP},
+      lastUser_id = #{lastUser_id,jdbcType=INTEGER},
+      lastSubmitTime = #{lastSubmitTime,jdbcType=TIMESTAMP},
       label = #{label,jdbcType=VARCHAR},
       title = #{title,jdbcType=VARCHAR},
       position = #{position,jdbcType=INTEGER},
-      viewCount = #{viewcount,jdbcType=INTEGER},
+      viewCount = #{viewCount,jdbcType=INTEGER},
       locked = #{locked,jdbcType=BIT},
       hided = #{hided,jdbcType=BIT},
       deleted = #{deleted,jdbcType=BIT},
@@ -343,12 +378,14 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="net.industryhive.bean.Notice">
     update notice
-    set user_id = #{userId,jdbcType=INTEGER},
-      submitTime = #{submittime,jdbcType=TIMESTAMP},
+    set user_id = #{user_id,jdbcType=INTEGER},
+      submitTime = #{submitTime,jdbcType=TIMESTAMP},
+      lastUser_id = #{lastUser_id,jdbcType=INTEGER},
+      lastSubmitTime = #{lastSubmitTime,jdbcType=TIMESTAMP},
       label = #{label,jdbcType=VARCHAR},
       title = #{title,jdbcType=VARCHAR},
       position = #{position,jdbcType=INTEGER},
-      viewCount = #{viewcount,jdbcType=INTEGER},
+      viewCount = #{viewCount,jdbcType=INTEGER},
       locked = #{locked,jdbcType=BIT},
       hided = #{hided,jdbcType=BIT},
       deleted = #{deleted,jdbcType=BIT}

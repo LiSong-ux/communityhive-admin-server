@@ -165,123 +165,243 @@ public class NoticeExample {
             return (Criteria) this;
         }
 
-        public Criteria andUserIdIsNull() {
+        public Criteria andUser_idIsNull() {
             addCriterion("user_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdIsNotNull() {
+        public Criteria andUser_idIsNotNull() {
             addCriterion("user_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdEqualTo(Integer value) {
-            addCriterion("user_id =", value, "userId");
+        public Criteria andUser_idEqualTo(Integer value) {
+            addCriterion("user_id =", value, "user_id");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdNotEqualTo(Integer value) {
-            addCriterion("user_id <>", value, "userId");
+        public Criteria andUser_idNotEqualTo(Integer value) {
+            addCriterion("user_id <>", value, "user_id");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdGreaterThan(Integer value) {
-            addCriterion("user_id >", value, "userId");
+        public Criteria andUser_idGreaterThan(Integer value) {
+            addCriterion("user_id >", value, "user_id");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdGreaterThanOrEqualTo(Integer value) {
-            addCriterion("user_id >=", value, "userId");
+        public Criteria andUser_idGreaterThanOrEqualTo(Integer value) {
+            addCriterion("user_id >=", value, "user_id");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdLessThan(Integer value) {
-            addCriterion("user_id <", value, "userId");
+        public Criteria andUser_idLessThan(Integer value) {
+            addCriterion("user_id <", value, "user_id");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdLessThanOrEqualTo(Integer value) {
-            addCriterion("user_id <=", value, "userId");
+        public Criteria andUser_idLessThanOrEqualTo(Integer value) {
+            addCriterion("user_id <=", value, "user_id");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdIn(List<Integer> values) {
-            addCriterion("user_id in", values, "userId");
+        public Criteria andUser_idIn(List<Integer> values) {
+            addCriterion("user_id in", values, "user_id");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdNotIn(List<Integer> values) {
-            addCriterion("user_id not in", values, "userId");
+        public Criteria andUser_idNotIn(List<Integer> values) {
+            addCriterion("user_id not in", values, "user_id");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdBetween(Integer value1, Integer value2) {
-            addCriterion("user_id between", value1, value2, "userId");
+        public Criteria andUser_idBetween(Integer value1, Integer value2) {
+            addCriterion("user_id between", value1, value2, "user_id");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdNotBetween(Integer value1, Integer value2) {
-            addCriterion("user_id not between", value1, value2, "userId");
+        public Criteria andUser_idNotBetween(Integer value1, Integer value2) {
+            addCriterion("user_id not between", value1, value2, "user_id");
             return (Criteria) this;
         }
 
-        public Criteria andSubmittimeIsNull() {
+        public Criteria andSubmitTimeIsNull() {
             addCriterion("submitTime is null");
             return (Criteria) this;
         }
 
-        public Criteria andSubmittimeIsNotNull() {
+        public Criteria andSubmitTimeIsNotNull() {
             addCriterion("submitTime is not null");
             return (Criteria) this;
         }
 
-        public Criteria andSubmittimeEqualTo(Date value) {
-            addCriterion("submitTime =", value, "submittime");
+        public Criteria andSubmitTimeEqualTo(Date value) {
+            addCriterion("submitTime =", value, "submitTime");
             return (Criteria) this;
         }
 
-        public Criteria andSubmittimeNotEqualTo(Date value) {
-            addCriterion("submitTime <>", value, "submittime");
+        public Criteria andSubmitTimeNotEqualTo(Date value) {
+            addCriterion("submitTime <>", value, "submitTime");
             return (Criteria) this;
         }
 
-        public Criteria andSubmittimeGreaterThan(Date value) {
-            addCriterion("submitTime >", value, "submittime");
+        public Criteria andSubmitTimeGreaterThan(Date value) {
+            addCriterion("submitTime >", value, "submitTime");
             return (Criteria) this;
         }
 
-        public Criteria andSubmittimeGreaterThanOrEqualTo(Date value) {
-            addCriterion("submitTime >=", value, "submittime");
+        public Criteria andSubmitTimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("submitTime >=", value, "submitTime");
             return (Criteria) this;
         }
 
-        public Criteria andSubmittimeLessThan(Date value) {
-            addCriterion("submitTime <", value, "submittime");
+        public Criteria andSubmitTimeLessThan(Date value) {
+            addCriterion("submitTime <", value, "submitTime");
             return (Criteria) this;
         }
 
-        public Criteria andSubmittimeLessThanOrEqualTo(Date value) {
-            addCriterion("submitTime <=", value, "submittime");
+        public Criteria andSubmitTimeLessThanOrEqualTo(Date value) {
+            addCriterion("submitTime <=", value, "submitTime");
             return (Criteria) this;
         }
 
-        public Criteria andSubmittimeIn(List<Date> values) {
-            addCriterion("submitTime in", values, "submittime");
+        public Criteria andSubmitTimeIn(List<Date> values) {
+            addCriterion("submitTime in", values, "submitTime");
             return (Criteria) this;
         }
 
-        public Criteria andSubmittimeNotIn(List<Date> values) {
-            addCriterion("submitTime not in", values, "submittime");
+        public Criteria andSubmitTimeNotIn(List<Date> values) {
+            addCriterion("submitTime not in", values, "submitTime");
             return (Criteria) this;
         }
 
-        public Criteria andSubmittimeBetween(Date value1, Date value2) {
-            addCriterion("submitTime between", value1, value2, "submittime");
+        public Criteria andSubmitTimeBetween(Date value1, Date value2) {
+            addCriterion("submitTime between", value1, value2, "submitTime");
             return (Criteria) this;
         }
 
-        public Criteria andSubmittimeNotBetween(Date value1, Date value2) {
-            addCriterion("submitTime not between", value1, value2, "submittime");
+        public Criteria andSubmitTimeNotBetween(Date value1, Date value2) {
+            addCriterion("submitTime not between", value1, value2, "submitTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastUser_idIsNull() {
+            addCriterion("lastUser_id is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastUser_idIsNotNull() {
+            addCriterion("lastUser_id is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastUser_idEqualTo(Integer value) {
+            addCriterion("lastUser_id =", value, "lastUser_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastUser_idNotEqualTo(Integer value) {
+            addCriterion("lastUser_id <>", value, "lastUser_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastUser_idGreaterThan(Integer value) {
+            addCriterion("lastUser_id >", value, "lastUser_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastUser_idGreaterThanOrEqualTo(Integer value) {
+            addCriterion("lastUser_id >=", value, "lastUser_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastUser_idLessThan(Integer value) {
+            addCriterion("lastUser_id <", value, "lastUser_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastUser_idLessThanOrEqualTo(Integer value) {
+            addCriterion("lastUser_id <=", value, "lastUser_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastUser_idIn(List<Integer> values) {
+            addCriterion("lastUser_id in", values, "lastUser_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastUser_idNotIn(List<Integer> values) {
+            addCriterion("lastUser_id not in", values, "lastUser_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastUser_idBetween(Integer value1, Integer value2) {
+            addCriterion("lastUser_id between", value1, value2, "lastUser_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastUser_idNotBetween(Integer value1, Integer value2) {
+            addCriterion("lastUser_id not between", value1, value2, "lastUser_id");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastSubmitTimeIsNull() {
+            addCriterion("lastSubmitTime is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastSubmitTimeIsNotNull() {
+            addCriterion("lastSubmitTime is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastSubmitTimeEqualTo(Date value) {
+            addCriterion("lastSubmitTime =", value, "lastSubmitTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastSubmitTimeNotEqualTo(Date value) {
+            addCriterion("lastSubmitTime <>", value, "lastSubmitTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastSubmitTimeGreaterThan(Date value) {
+            addCriterion("lastSubmitTime >", value, "lastSubmitTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastSubmitTimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("lastSubmitTime >=", value, "lastSubmitTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastSubmitTimeLessThan(Date value) {
+            addCriterion("lastSubmitTime <", value, "lastSubmitTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastSubmitTimeLessThanOrEqualTo(Date value) {
+            addCriterion("lastSubmitTime <=", value, "lastSubmitTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastSubmitTimeIn(List<Date> values) {
+            addCriterion("lastSubmitTime in", values, "lastSubmitTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastSubmitTimeNotIn(List<Date> values) {
+            addCriterion("lastSubmitTime not in", values, "lastSubmitTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastSubmitTimeBetween(Date value1, Date value2) {
+            addCriterion("lastSubmitTime between", value1, value2, "lastSubmitTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andLastSubmitTimeNotBetween(Date value1, Date value2) {
+            addCriterion("lastSubmitTime not between", value1, value2, "lastSubmitTime");
             return (Criteria) this;
         }
 
@@ -485,63 +605,63 @@ public class NoticeExample {
             return (Criteria) this;
         }
 
-        public Criteria andViewcountIsNull() {
+        public Criteria andViewCountIsNull() {
             addCriterion("viewCount is null");
             return (Criteria) this;
         }
 
-        public Criteria andViewcountIsNotNull() {
+        public Criteria andViewCountIsNotNull() {
             addCriterion("viewCount is not null");
             return (Criteria) this;
         }
 
-        public Criteria andViewcountEqualTo(Integer value) {
-            addCriterion("viewCount =", value, "viewcount");
+        public Criteria andViewCountEqualTo(Integer value) {
+            addCriterion("viewCount =", value, "viewCount");
             return (Criteria) this;
         }
 
-        public Criteria andViewcountNotEqualTo(Integer value) {
-            addCriterion("viewCount <>", value, "viewcount");
+        public Criteria andViewCountNotEqualTo(Integer value) {
+            addCriterion("viewCount <>", value, "viewCount");
             return (Criteria) this;
         }
 
-        public Criteria andViewcountGreaterThan(Integer value) {
-            addCriterion("viewCount >", value, "viewcount");
+        public Criteria andViewCountGreaterThan(Integer value) {
+            addCriterion("viewCount >", value, "viewCount");
             return (Criteria) this;
         }
 
-        public Criteria andViewcountGreaterThanOrEqualTo(Integer value) {
-            addCriterion("viewCount >=", value, "viewcount");
+        public Criteria andViewCountGreaterThanOrEqualTo(Integer value) {
+            addCriterion("viewCount >=", value, "viewCount");
             return (Criteria) this;
         }
 
-        public Criteria andViewcountLessThan(Integer value) {
-            addCriterion("viewCount <", value, "viewcount");
+        public Criteria andViewCountLessThan(Integer value) {
+            addCriterion("viewCount <", value, "viewCount");
             return (Criteria) this;
         }
 
-        public Criteria andViewcountLessThanOrEqualTo(Integer value) {
-            addCriterion("viewCount <=", value, "viewcount");
+        public Criteria andViewCountLessThanOrEqualTo(Integer value) {
+            addCriterion("viewCount <=", value, "viewCount");
             return (Criteria) this;
         }
 
-        public Criteria andViewcountIn(List<Integer> values) {
-            addCriterion("viewCount in", values, "viewcount");
+        public Criteria andViewCountIn(List<Integer> values) {
+            addCriterion("viewCount in", values, "viewCount");
             return (Criteria) this;
         }
 
-        public Criteria andViewcountNotIn(List<Integer> values) {
-            addCriterion("viewCount not in", values, "viewcount");
+        public Criteria andViewCountNotIn(List<Integer> values) {
+            addCriterion("viewCount not in", values, "viewCount");
             return (Criteria) this;
         }
 
-        public Criteria andViewcountBetween(Integer value1, Integer value2) {
-            addCriterion("viewCount between", value1, value2, "viewcount");
+        public Criteria andViewCountBetween(Integer value1, Integer value2) {
+            addCriterion("viewCount between", value1, value2, "viewCount");
             return (Criteria) this;
         }
 
-        public Criteria andViewcountNotBetween(Integer value1, Integer value2) {
-            addCriterion("viewCount not between", value1, value2, "viewcount");
+        public Criteria andViewCountNotBetween(Integer value1, Integer value2) {
+            addCriterion("viewCount not between", value1, value2, "viewCount");
             return (Criteria) this;
         }
 
