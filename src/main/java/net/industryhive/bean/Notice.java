@@ -15,8 +15,6 @@ public class Notice {
 
     private Integer position;
 
-    private Integer replycount;
-
     private Integer viewcount;
 
     private Boolean locked;
@@ -73,14 +71,6 @@ public class Notice {
 
     public void setPosition(Integer position) {
         this.position = position;
-    }
-
-    public Integer getReplycount() {
-        return replycount;
-    }
-
-    public void setReplycount(Integer replycount) {
-        this.replycount = replycount;
     }
 
     public Integer getViewcount() {

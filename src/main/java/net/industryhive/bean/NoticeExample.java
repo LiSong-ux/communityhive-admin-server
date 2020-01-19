@@ -485,66 +485,6 @@ public class NoticeExample {
             return (Criteria) this;
         }
 
-        public Criteria andReplycountIsNull() {
-            addCriterion("replyCount is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andReplycountIsNotNull() {
-            addCriterion("replyCount is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andReplycountEqualTo(Integer value) {
-            addCriterion("replyCount =", value, "replycount");
-            return (Criteria) this;
-        }
-
-        public Criteria andReplycountNotEqualTo(Integer value) {
-            addCriterion("replyCount <>", value, "replycount");
-            return (Criteria) this;
-        }
-
-        public Criteria andReplycountGreaterThan(Integer value) {
-            addCriterion("replyCount >", value, "replycount");
-            return (Criteria) this;
-        }
-
-        public Criteria andReplycountGreaterThanOrEqualTo(Integer value) {
-            addCriterion("replyCount >=", value, "replycount");
-            return (Criteria) this;
-        }
-
-        public Criteria andReplycountLessThan(Integer value) {
-            addCriterion("replyCount <", value, "replycount");
-            return (Criteria) this;
-        }
-
-        public Criteria andReplycountLessThanOrEqualTo(Integer value) {
-            addCriterion("replyCount <=", value, "replycount");
-            return (Criteria) this;
-        }
-
-        public Criteria andReplycountIn(List<Integer> values) {
-            addCriterion("replyCount in", values, "replycount");
-            return (Criteria) this;
-        }
-
-        public Criteria andReplycountNotIn(List<Integer> values) {
-            addCriterion("replyCount not in", values, "replycount");
-            return (Criteria) this;
-        }
-
-        public Criteria andReplycountBetween(Integer value1, Integer value2) {
-            addCriterion("replyCount between", value1, value2, "replycount");
-            return (Criteria) this;
-        }
-
-        public Criteria andReplycountNotBetween(Integer value1, Integer value2) {
-            addCriterion("replyCount not between", value1, value2, "replycount");
-            return (Criteria) this;
-        }
-
         public Criteria andViewcountIsNull() {
             addCriterion("viewCount is null");
             return (Criteria) this;

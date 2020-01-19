@@ -8,7 +8,6 @@
     <result column="label" jdbcType="VARCHAR" property="label" />
     <result column="title" jdbcType="VARCHAR" property="title" />
     <result column="position" jdbcType="INTEGER" property="position" />
-    <result column="replyCount" jdbcType="INTEGER" property="replycount" />
     <result column="viewCount" jdbcType="INTEGER" property="viewcount" />
     <result column="locked" jdbcType="BIT" property="locked" />
     <result column="hided" jdbcType="BIT" property="hided" />
@@ -76,8 +75,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, user_id, submitTime, label, title, position, replyCount, viewCount, locked, hided, 
-    deleted
+    id, user_id, submitTime, label, title, position, viewCount, locked, hided, deleted
   </sql>
   <sql id="Blob_Column_List">
     content
@@ -133,14 +131,12 @@
   <insert id="insert" parameterType="net.industryhive.bean.Notice">
     insert into notice (id, user_id, submitTime, 
       label, title, position, 
-      replyCount, viewCount, locked, 
-      hided, deleted, content
-      )
+      viewCount, locked, hided, deleted, 
+      content)
     values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{submittime,jdbcType=TIMESTAMP}, 
       #{label,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{position,jdbcType=INTEGER}, 
-      #{replycount,jdbcType=INTEGER}, #{viewcount,jdbcType=INTEGER}, #{locked,jdbcType=BIT}, 
-      #{hided,jdbcType=BIT}, #{deleted,jdbcType=BIT}, #{content,jdbcType=LONGVARCHAR}
-      )
+      #{viewcount,jdbcType=INTEGER}, #{locked,jdbcType=BIT}, #{hided,jdbcType=BIT}, #{deleted,jdbcType=BIT}, 
+      #{content,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="net.industryhive.bean.Notice">
     insert into notice
@@ -162,9 +158,6 @@
       </if>
       <if test="position != null">
         position,
-      </if>
-      <if test="replycount != null">
-        replyCount,
       </if>
       <if test="viewcount != null">
         viewCount,
@@ -200,9 +193,6 @@
       </if>
       <if test="position != null">
         #{position,jdbcType=INTEGER},
-      </if>
-      <if test="replycount != null">
-        #{replycount,jdbcType=INTEGER},
       </if>
       <if test="viewcount != null">
         #{viewcount,jdbcType=INTEGER},
@@ -248,9 +238,6 @@
       <if test="record.position != null">
         position = #{record.position,jdbcType=INTEGER},
       </if>
-      <if test="record.replycount != null">
-        replyCount = #{record.replycount,jdbcType=INTEGER},
-      </if>
       <if test="record.viewcount != null">
         viewCount = #{record.viewcount,jdbcType=INTEGER},
       </if>
@@ -279,7 +266,6 @@
       label = #{record.label,jdbcType=VARCHAR},
       title = #{record.title,jdbcType=VARCHAR},
       position = #{record.position,jdbcType=INTEGER},
-      replyCount = #{record.replycount,jdbcType=INTEGER},
       viewCount = #{record.viewcount,jdbcType=INTEGER},
       locked = #{record.locked,jdbcType=BIT},
       hided = #{record.hided,jdbcType=BIT},
@@ -297,7 +283,6 @@
       label = #{record.label,jdbcType=VARCHAR},
       title = #{record.title,jdbcType=VARCHAR},
       position = #{record.position,jdbcType=INTEGER},
-      replyCount = #{record.replycount,jdbcType=INTEGER},
       viewCount = #{record.viewcount,jdbcType=INTEGER},
       locked = #{record.locked,jdbcType=BIT},
       hided = #{record.hided,jdbcType=BIT},
@@ -324,9 +309,6 @@
       <if test="position != null">
         position = #{position,jdbcType=INTEGER},
       </if>
-      <if test="replycount != null">
-        replyCount = #{replycount,jdbcType=INTEGER},
-      </if>
       <if test="viewcount != null">
         viewCount = #{viewcount,jdbcType=INTEGER},
       </if>
@@ -352,7 +334,6 @@
       label = #{label,jdbcType=VARCHAR},
       title = #{title,jdbcType=VARCHAR},
       position = #{position,jdbcType=INTEGER},
-      replyCount = #{replycount,jdbcType=INTEGER},
       viewCount = #{viewcount,jdbcType=INTEGER},
       locked = #{locked,jdbcType=BIT},
       hided = #{hided,jdbcType=BIT},
@@ -367,7 +348,6 @@
       label = #{label,jdbcType=VARCHAR},
       title = #{title,jdbcType=VARCHAR},
       position = #{position,jdbcType=INTEGER},
-      replyCount = #{replycount,jdbcType=INTEGER},
       viewCount = #{viewcount,jdbcType=INTEGER},
       locked = #{locked,jdbcType=BIT},
       hided = #{hided,jdbcType=BIT},
