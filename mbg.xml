@@ -45,12 +45,18 @@
         </javaClientGenerator>
 
         <!-- 指定每个表的生成策略 -->
-        <!--<table tableName="user" domainObjectName="User"></table>-->
-        <!--<table tableName="topic" domainObjectName="Topic"></table>-->
-        <!--<table tableName="reply" domainObjectName="Reply"></table>-->
-        <table tableName="authority" domainObjectName="Authority">
+        <table tableName="user" domainObjectName="User">
             <property name="useActualColumnNames" value="true"/>
         </table>
+        <table tableName="topic" domainObjectName="Topic">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+        <table tableName="reply" domainObjectName="Reply">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+        <!--<table tableName="authority" domainObjectName="Authority">-->
+            <!--<property name="useActualColumnNames" value="true"/>-->
+        <!--</table>-->
         <!--<table tableName="access" domainObjectName="Access"></table>-->
         <!--<table tableName="login" domainObjectName="Login"></table>-->
         <!--<table tableName="notice" domainObjectName="Notice">-->

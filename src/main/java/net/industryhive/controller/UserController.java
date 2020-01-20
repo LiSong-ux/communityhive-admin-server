@@ -57,7 +57,7 @@ public class UserController {
         session.setAttribute("admin", admin);
 
         // 用户登录次数+1
-        admin.setLogincount(admin.getLogincount() + 1);
+        admin.setLoginCount(admin.getLoginCount() + 1);
         userService.updateUser(admin);
 
         //记录用户登录ip、时间

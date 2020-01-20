@@ -375,73 +375,73 @@ public class UserExample {
             return (Criteria) this;
         }
 
-        public Criteria andCountrycodeIsNull() {
+        public Criteria andCountryCodeIsNull() {
             addCriterion("countryCode is null");
             return (Criteria) this;
         }
 
-        public Criteria andCountrycodeIsNotNull() {
+        public Criteria andCountryCodeIsNotNull() {
             addCriterion("countryCode is not null");
             return (Criteria) this;
         }
 
-        public Criteria andCountrycodeEqualTo(String value) {
-            addCriterion("countryCode =", value, "countrycode");
+        public Criteria andCountryCodeEqualTo(String value) {
+            addCriterion("countryCode =", value, "countryCode");
             return (Criteria) this;
         }
 
-        public Criteria andCountrycodeNotEqualTo(String value) {
-            addCriterion("countryCode <>", value, "countrycode");
+        public Criteria andCountryCodeNotEqualTo(String value) {
+            addCriterion("countryCode <>", value, "countryCode");
             return (Criteria) this;
         }
 
-        public Criteria andCountrycodeGreaterThan(String value) {
-            addCriterion("countryCode >", value, "countrycode");
+        public Criteria andCountryCodeGreaterThan(String value) {
+            addCriterion("countryCode >", value, "countryCode");
             return (Criteria) this;
         }
 
-        public Criteria andCountrycodeGreaterThanOrEqualTo(String value) {
-            addCriterion("countryCode >=", value, "countrycode");
+        public Criteria andCountryCodeGreaterThanOrEqualTo(String value) {
+            addCriterion("countryCode >=", value, "countryCode");
             return (Criteria) this;
         }
 
-        public Criteria andCountrycodeLessThan(String value) {
-            addCriterion("countryCode <", value, "countrycode");
+        public Criteria andCountryCodeLessThan(String value) {
+            addCriterion("countryCode <", value, "countryCode");
             return (Criteria) this;
         }
 
-        public Criteria andCountrycodeLessThanOrEqualTo(String value) {
-            addCriterion("countryCode <=", value, "countrycode");
+        public Criteria andCountryCodeLessThanOrEqualTo(String value) {
+            addCriterion("countryCode <=", value, "countryCode");
             return (Criteria) this;
         }
 
-        public Criteria andCountrycodeLike(String value) {
-            addCriterion("countryCode like", value, "countrycode");
+        public Criteria andCountryCodeLike(String value) {
+            addCriterion("countryCode like", value, "countryCode");
             return (Criteria) this;
         }
 
-        public Criteria andCountrycodeNotLike(String value) {
-            addCriterion("countryCode not like", value, "countrycode");
+        public Criteria andCountryCodeNotLike(String value) {
+            addCriterion("countryCode not like", value, "countryCode");
             return (Criteria) this;
         }
 
-        public Criteria andCountrycodeIn(List<String> values) {
-            addCriterion("countryCode in", values, "countrycode");
+        public Criteria andCountryCodeIn(List<String> values) {
+            addCriterion("countryCode in", values, "countryCode");
             return (Criteria) this;
         }
 
-        public Criteria andCountrycodeNotIn(List<String> values) {
-            addCriterion("countryCode not in", values, "countrycode");
+        public Criteria andCountryCodeNotIn(List<String> values) {
+            addCriterion("countryCode not in", values, "countryCode");
             return (Criteria) this;
         }
 
-        public Criteria andCountrycodeBetween(String value1, String value2) {
-            addCriterion("countryCode between", value1, value2, "countrycode");
+        public Criteria andCountryCodeBetween(String value1, String value2) {
+            addCriterion("countryCode between", value1, value2, "countryCode");
             return (Criteria) this;
         }
 
-        public Criteria andCountrycodeNotBetween(String value1, String value2) {
-            addCriterion("countryCode not between", value1, value2, "countrycode");
+        public Criteria andCountryCodeNotBetween(String value1, String value2) {
+            addCriterion("countryCode not between", value1, value2, "countryCode");
             return (Criteria) this;
         }
 
@@ -645,243 +645,243 @@ public class UserExample {
             return (Criteria) this;
         }
 
-        public Criteria andAuthorityIdIsNull() {
+        public Criteria andAuthority_idIsNull() {
             addCriterion("authority_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andAuthorityIdIsNotNull() {
+        public Criteria andAuthority_idIsNotNull() {
             addCriterion("authority_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andAuthorityIdEqualTo(Integer value) {
-            addCriterion("authority_id =", value, "authorityId");
+        public Criteria andAuthority_idEqualTo(Integer value) {
+            addCriterion("authority_id =", value, "authority_id");
             return (Criteria) this;
         }
 
-        public Criteria andAuthorityIdNotEqualTo(Integer value) {
-            addCriterion("authority_id <>", value, "authorityId");
+        public Criteria andAuthority_idNotEqualTo(Integer value) {
+            addCriterion("authority_id <>", value, "authority_id");
             return (Criteria) this;
         }
 
-        public Criteria andAuthorityIdGreaterThan(Integer value) {
-            addCriterion("authority_id >", value, "authorityId");
+        public Criteria andAuthority_idGreaterThan(Integer value) {
+            addCriterion("authority_id >", value, "authority_id");
             return (Criteria) this;
         }
 
-        public Criteria andAuthorityIdGreaterThanOrEqualTo(Integer value) {
-            addCriterion("authority_id >=", value, "authorityId");
+        public Criteria andAuthority_idGreaterThanOrEqualTo(Integer value) {
+            addCriterion("authority_id >=", value, "authority_id");
             return (Criteria) this;
         }
 
-        public Criteria andAuthorityIdLessThan(Integer value) {
-            addCriterion("authority_id <", value, "authorityId");
+        public Criteria andAuthority_idLessThan(Integer value) {
+            addCriterion("authority_id <", value, "authority_id");
             return (Criteria) this;
         }
 
-        public Criteria andAuthorityIdLessThanOrEqualTo(Integer value) {
-            addCriterion("authority_id <=", value, "authorityId");
+        public Criteria andAuthority_idLessThanOrEqualTo(Integer value) {
+            addCriterion("authority_id <=", value, "authority_id");
             return (Criteria) this;
         }
 
-        public Criteria andAuthorityIdIn(List<Integer> values) {
-            addCriterion("authority_id in", values, "authorityId");
+        public Criteria andAuthority_idIn(List<Integer> values) {
+            addCriterion("authority_id in", values, "authority_id");
             return (Criteria) this;
         }
 
-        public Criteria andAuthorityIdNotIn(List<Integer> values) {
-            addCriterion("authority_id not in", values, "authorityId");
+        public Criteria andAuthority_idNotIn(List<Integer> values) {
+            addCriterion("authority_id not in", values, "authority_id");
             return (Criteria) this;
         }
 
-        public Criteria andAuthorityIdBetween(Integer value1, Integer value2) {
-            addCriterion("authority_id between", value1, value2, "authorityId");
+        public Criteria andAuthority_idBetween(Integer value1, Integer value2) {
+            addCriterion("authority_id between", value1, value2, "authority_id");
             return (Criteria) this;
         }
 
-        public Criteria andAuthorityIdNotBetween(Integer value1, Integer value2) {
-            addCriterion("authority_id not between", value1, value2, "authorityId");
+        public Criteria andAuthority_idNotBetween(Integer value1, Integer value2) {
+            addCriterion("authority_id not between", value1, value2, "authority_id");
             return (Criteria) this;
         }
 
-        public Criteria andBannedtopicIsNull() {
+        public Criteria andBannedTopicIsNull() {
             addCriterion("bannedTopic is null");
             return (Criteria) this;
         }
 
-        public Criteria andBannedtopicIsNotNull() {
+        public Criteria andBannedTopicIsNotNull() {
             addCriterion("bannedTopic is not null");
             return (Criteria) this;
         }
 
-        public Criteria andBannedtopicEqualTo(Boolean value) {
-            addCriterion("bannedTopic =", value, "bannedtopic");
+        public Criteria andBannedTopicEqualTo(Boolean value) {
+            addCriterion("bannedTopic =", value, "bannedTopic");
             return (Criteria) this;
         }
 
-        public Criteria andBannedtopicNotEqualTo(Boolean value) {
-            addCriterion("bannedTopic <>", value, "bannedtopic");
+        public Criteria andBannedTopicNotEqualTo(Boolean value) {
+            addCriterion("bannedTopic <>", value, "bannedTopic");
             return (Criteria) this;
         }
 
-        public Criteria andBannedtopicGreaterThan(Boolean value) {
-            addCriterion("bannedTopic >", value, "bannedtopic");
+        public Criteria andBannedTopicGreaterThan(Boolean value) {
+            addCriterion("bannedTopic >", value, "bannedTopic");
             return (Criteria) this;
         }
 
-        public Criteria andBannedtopicGreaterThanOrEqualTo(Boolean value) {
-            addCriterion("bannedTopic >=", value, "bannedtopic");
+        public Criteria andBannedTopicGreaterThanOrEqualTo(Boolean value) {
+            addCriterion("bannedTopic >=", value, "bannedTopic");
             return (Criteria) this;
         }
 
-        public Criteria andBannedtopicLessThan(Boolean value) {
-            addCriterion("bannedTopic <", value, "bannedtopic");
+        public Criteria andBannedTopicLessThan(Boolean value) {
+            addCriterion("bannedTopic <", value, "bannedTopic");
             return (Criteria) this;
         }
 
-        public Criteria andBannedtopicLessThanOrEqualTo(Boolean value) {
-            addCriterion("bannedTopic <=", value, "bannedtopic");
+        public Criteria andBannedTopicLessThanOrEqualTo(Boolean value) {
+            addCriterion("bannedTopic <=", value, "bannedTopic");
             return (Criteria) this;
         }
 
-        public Criteria andBannedtopicIn(List<Boolean> values) {
-            addCriterion("bannedTopic in", values, "bannedtopic");
+        public Criteria andBannedTopicIn(List<Boolean> values) {
+            addCriterion("bannedTopic in", values, "bannedTopic");
             return (Criteria) this;
         }
 
-        public Criteria andBannedtopicNotIn(List<Boolean> values) {
-            addCriterion("bannedTopic not in", values, "bannedtopic");
+        public Criteria andBannedTopicNotIn(List<Boolean> values) {
+            addCriterion("bannedTopic not in", values, "bannedTopic");
             return (Criteria) this;
         }
 
-        public Criteria andBannedtopicBetween(Boolean value1, Boolean value2) {
-            addCriterion("bannedTopic between", value1, value2, "bannedtopic");
+        public Criteria andBannedTopicBetween(Boolean value1, Boolean value2) {
+            addCriterion("bannedTopic between", value1, value2, "bannedTopic");
             return (Criteria) this;
         }
 
-        public Criteria andBannedtopicNotBetween(Boolean value1, Boolean value2) {
-            addCriterion("bannedTopic not between", value1, value2, "bannedtopic");
+        public Criteria andBannedTopicNotBetween(Boolean value1, Boolean value2) {
+            addCriterion("bannedTopic not between", value1, value2, "bannedTopic");
             return (Criteria) this;
         }
 
-        public Criteria andBannedreplyIsNull() {
+        public Criteria andBannedReplyIsNull() {
             addCriterion("bannedReply is null");
             return (Criteria) this;
         }
 
-        public Criteria andBannedreplyIsNotNull() {
+        public Criteria andBannedReplyIsNotNull() {
             addCriterion("bannedReply is not null");
             return (Criteria) this;
         }
 
-        public Criteria andBannedreplyEqualTo(Boolean value) {
-            addCriterion("bannedReply =", value, "bannedreply");
+        public Criteria andBannedReplyEqualTo(Boolean value) {
+            addCriterion("bannedReply =", value, "bannedReply");
             return (Criteria) this;
         }
 
-        public Criteria andBannedreplyNotEqualTo(Boolean value) {
-            addCriterion("bannedReply <>", value, "bannedreply");
+        public Criteria andBannedReplyNotEqualTo(Boolean value) {
+            addCriterion("bannedReply <>", value, "bannedReply");
             return (Criteria) this;
         }
 
-        public Criteria andBannedreplyGreaterThan(Boolean value) {
-            addCriterion("bannedReply >", value, "bannedreply");
+        public Criteria andBannedReplyGreaterThan(Boolean value) {
+            addCriterion("bannedReply >", value, "bannedReply");
             return (Criteria) this;
         }
 
-        public Criteria andBannedreplyGreaterThanOrEqualTo(Boolean value) {
-            addCriterion("bannedReply >=", value, "bannedreply");
+        public Criteria andBannedReplyGreaterThanOrEqualTo(Boolean value) {
+            addCriterion("bannedReply >=", value, "bannedReply");
             return (Criteria) this;
         }
 
-        public Criteria andBannedreplyLessThan(Boolean value) {
-            addCriterion("bannedReply <", value, "bannedreply");
+        public Criteria andBannedReplyLessThan(Boolean value) {
+            addCriterion("bannedReply <", value, "bannedReply");
             return (Criteria) this;
         }
 
-        public Criteria andBannedreplyLessThanOrEqualTo(Boolean value) {
-            addCriterion("bannedReply <=", value, "bannedreply");
+        public Criteria andBannedReplyLessThanOrEqualTo(Boolean value) {
+            addCriterion("bannedReply <=", value, "bannedReply");
             return (Criteria) this;
         }
 
-        public Criteria andBannedreplyIn(List<Boolean> values) {
-            addCriterion("bannedReply in", values, "bannedreply");
+        public Criteria andBannedReplyIn(List<Boolean> values) {
+            addCriterion("bannedReply in", values, "bannedReply");
             return (Criteria) this;
         }
 
-        public Criteria andBannedreplyNotIn(List<Boolean> values) {
-            addCriterion("bannedReply not in", values, "bannedreply");
+        public Criteria andBannedReplyNotIn(List<Boolean> values) {
+            addCriterion("bannedReply not in", values, "bannedReply");
             return (Criteria) this;
         }
 
-        public Criteria andBannedreplyBetween(Boolean value1, Boolean value2) {
-            addCriterion("bannedReply between", value1, value2, "bannedreply");
+        public Criteria andBannedReplyBetween(Boolean value1, Boolean value2) {
+            addCriterion("bannedReply between", value1, value2, "bannedReply");
             return (Criteria) this;
         }
 
-        public Criteria andBannedreplyNotBetween(Boolean value1, Boolean value2) {
-            addCriterion("bannedReply not between", value1, value2, "bannedreply");
+        public Criteria andBannedReplyNotBetween(Boolean value1, Boolean value2) {
+            addCriterion("bannedReply not between", value1, value2, "bannedReply");
             return (Criteria) this;
         }
 
-        public Criteria andBannedmessageIsNull() {
+        public Criteria andBannedMessageIsNull() {
             addCriterion("bannedMessage is null");
             return (Criteria) this;
         }
 
-        public Criteria andBannedmessageIsNotNull() {
+        public Criteria andBannedMessageIsNotNull() {
             addCriterion("bannedMessage is not null");
             return (Criteria) this;
         }
 
-        public Criteria andBannedmessageEqualTo(Boolean value) {
-            addCriterion("bannedMessage =", value, "bannedmessage");
+        public Criteria andBannedMessageEqualTo(Boolean value) {
+            addCriterion("bannedMessage =", value, "bannedMessage");
             return (Criteria) this;
         }
 
-        public Criteria andBannedmessageNotEqualTo(Boolean value) {
-            addCriterion("bannedMessage <>", value, "bannedmessage");
+        public Criteria andBannedMessageNotEqualTo(Boolean value) {
+            addCriterion("bannedMessage <>", value, "bannedMessage");
             return (Criteria) this;
         }
 
-        public Criteria andBannedmessageGreaterThan(Boolean value) {
-            addCriterion("bannedMessage >", value, "bannedmessage");
+        public Criteria andBannedMessageGreaterThan(Boolean value) {
+            addCriterion("bannedMessage >", value, "bannedMessage");
             return (Criteria) this;
         }
 
-        public Criteria andBannedmessageGreaterThanOrEqualTo(Boolean value) {
-            addCriterion("bannedMessage >=", value, "bannedmessage");
+        public Criteria andBannedMessageGreaterThanOrEqualTo(Boolean value) {
+            addCriterion("bannedMessage >=", value, "bannedMessage");
             return (Criteria) this;
         }
 
-        public Criteria andBannedmessageLessThan(Boolean value) {
-            addCriterion("bannedMessage <", value, "bannedmessage");
+        public Criteria andBannedMessageLessThan(Boolean value) {
+            addCriterion("bannedMessage <", value, "bannedMessage");
             return (Criteria) this;
         }
 
-        public Criteria andBannedmessageLessThanOrEqualTo(Boolean value) {
-            addCriterion("bannedMessage <=", value, "bannedmessage");
+        public Criteria andBannedMessageLessThanOrEqualTo(Boolean value) {
+            addCriterion("bannedMessage <=", value, "bannedMessage");
             return (Criteria) this;
         }
 
-        public Criteria andBannedmessageIn(List<Boolean> values) {
-            addCriterion("bannedMessage in", values, "bannedmessage");
+        public Criteria andBannedMessageIn(List<Boolean> values) {
+            addCriterion("bannedMessage in", values, "bannedMessage");
             return (Criteria) this;
         }
 
-        public Criteria andBannedmessageNotIn(List<Boolean> values) {
-            addCriterion("bannedMessage not in", values, "bannedmessage");
+        public Criteria andBannedMessageNotIn(List<Boolean> values) {
+            addCriterion("bannedMessage not in", values, "bannedMessage");
             return (Criteria) this;
         }
 
-        public Criteria andBannedmessageBetween(Boolean value1, Boolean value2) {
-            addCriterion("bannedMessage between", value1, value2, "bannedmessage");
+        public Criteria andBannedMessageBetween(Boolean value1, Boolean value2) {
+            addCriterion("bannedMessage between", value1, value2, "bannedMessage");
             return (Criteria) this;
         }
 
-        public Criteria andBannedmessageNotBetween(Boolean value1, Boolean value2) {
-            addCriterion("bannedMessage not between", value1, value2, "bannedmessage");
+        public Criteria andBannedMessageNotBetween(Boolean value1, Boolean value2) {
+            addCriterion("bannedMessage not between", value1, value2, "bannedMessage");
             return (Criteria) this;
         }
 
@@ -1005,243 +1005,243 @@ public class UserExample {
             return (Criteria) this;
         }
 
-        public Criteria andTopiccountIsNull() {
+        public Criteria andTopicCountIsNull() {
             addCriterion("topicCount is null");
             return (Criteria) this;
         }
 
-        public Criteria andTopiccountIsNotNull() {
+        public Criteria andTopicCountIsNotNull() {
             addCriterion("topicCount is not null");
             return (Criteria) this;
         }
 
-        public Criteria andTopiccountEqualTo(Integer value) {
-            addCriterion("topicCount =", value, "topiccount");
+        public Criteria andTopicCountEqualTo(Integer value) {
+            addCriterion("topicCount =", value, "topicCount");
             return (Criteria) this;
         }
 
-        public Criteria andTopiccountNotEqualTo(Integer value) {
-            addCriterion("topicCount <>", value, "topiccount");
+        public Criteria andTopicCountNotEqualTo(Integer value) {
+            addCriterion("topicCount <>", value, "topicCount");
             return (Criteria) this;
         }
 
-        public Criteria andTopiccountGreaterThan(Integer value) {
-            addCriterion("topicCount >", value, "topiccount");
+        public Criteria andTopicCountGreaterThan(Integer value) {
+            addCriterion("topicCount >", value, "topicCount");
             return (Criteria) this;
         }
 
-        public Criteria andTopiccountGreaterThanOrEqualTo(Integer value) {
-            addCriterion("topicCount >=", value, "topiccount");
+        public Criteria andTopicCountGreaterThanOrEqualTo(Integer value) {
+            addCriterion("topicCount >=", value, "topicCount");
             return (Criteria) this;
         }
 
-        public Criteria andTopiccountLessThan(Integer value) {
-            addCriterion("topicCount <", value, "topiccount");
+        public Criteria andTopicCountLessThan(Integer value) {
+            addCriterion("topicCount <", value, "topicCount");
             return (Criteria) this;
         }
 
-        public Criteria andTopiccountLessThanOrEqualTo(Integer value) {
-            addCriterion("topicCount <=", value, "topiccount");
+        public Criteria andTopicCountLessThanOrEqualTo(Integer value) {
+            addCriterion("topicCount <=", value, "topicCount");
             return (Criteria) this;
         }
 
-        public Criteria andTopiccountIn(List<Integer> values) {
-            addCriterion("topicCount in", values, "topiccount");
+        public Criteria andTopicCountIn(List<Integer> values) {
+            addCriterion("topicCount in", values, "topicCount");
             return (Criteria) this;
         }
 
-        public Criteria andTopiccountNotIn(List<Integer> values) {
-            addCriterion("topicCount not in", values, "topiccount");
+        public Criteria andTopicCountNotIn(List<Integer> values) {
+            addCriterion("topicCount not in", values, "topicCount");
             return (Criteria) this;
         }
 
-        public Criteria andTopiccountBetween(Integer value1, Integer value2) {
-            addCriterion("topicCount between", value1, value2, "topiccount");
+        public Criteria andTopicCountBetween(Integer value1, Integer value2) {
+            addCriterion("topicCount between", value1, value2, "topicCount");
             return (Criteria) this;
         }
 
-        public Criteria andTopiccountNotBetween(Integer value1, Integer value2) {
-            addCriterion("topicCount not between", value1, value2, "topiccount");
+        public Criteria andTopicCountNotBetween(Integer value1, Integer value2) {
+            addCriterion("topicCount not between", value1, value2, "topicCount");
             return (Criteria) this;
         }
 
-        public Criteria andReplycountIsNull() {
+        public Criteria andReplyCountIsNull() {
             addCriterion("replyCount is null");
             return (Criteria) this;
         }
 
-        public Criteria andReplycountIsNotNull() {
+        public Criteria andReplyCountIsNotNull() {
             addCriterion("replyCount is not null");
             return (Criteria) this;
         }
 
-        public Criteria andReplycountEqualTo(Integer value) {
-            addCriterion("replyCount =", value, "replycount");
+        public Criteria andReplyCountEqualTo(Integer value) {
+            addCriterion("replyCount =", value, "replyCount");
             return (Criteria) this;
         }
 
-        public Criteria andReplycountNotEqualTo(Integer value) {
-            addCriterion("replyCount <>", value, "replycount");
+        public Criteria andReplyCountNotEqualTo(Integer value) {
+            addCriterion("replyCount <>", value, "replyCount");
             return (Criteria) this;
         }
 
-        public Criteria andReplycountGreaterThan(Integer value) {
-            addCriterion("replyCount >", value, "replycount");
+        public Criteria andReplyCountGreaterThan(Integer value) {
+            addCriterion("replyCount >", value, "replyCount");
             return (Criteria) this;
         }
 
-        public Criteria andReplycountGreaterThanOrEqualTo(Integer value) {
-            addCriterion("replyCount >=", value, "replycount");
+        public Criteria andReplyCountGreaterThanOrEqualTo(Integer value) {
+            addCriterion("replyCount >=", value, "replyCount");
             return (Criteria) this;
         }
 
-        public Criteria andReplycountLessThan(Integer value) {
-            addCriterion("replyCount <", value, "replycount");
+        public Criteria andReplyCountLessThan(Integer value) {
+            addCriterion("replyCount <", value, "replyCount");
             return (Criteria) this;
         }
 
-        public Criteria andReplycountLessThanOrEqualTo(Integer value) {
-            addCriterion("replyCount <=", value, "replycount");
+        public Criteria andReplyCountLessThanOrEqualTo(Integer value) {
+            addCriterion("replyCount <=", value, "replyCount");
             return (Criteria) this;
         }
 
-        public Criteria andReplycountIn(List<Integer> values) {
-            addCriterion("replyCount in", values, "replycount");
+        public Criteria andReplyCountIn(List<Integer> values) {
+            addCriterion("replyCount in", values, "replyCount");
             return (Criteria) this;
         }
 
-        public Criteria andReplycountNotIn(List<Integer> values) {
-            addCriterion("replyCount not in", values, "replycount");
+        public Criteria andReplyCountNotIn(List<Integer> values) {
+            addCriterion("replyCount not in", values, "replyCount");
             return (Criteria) this;
         }
 
-        public Criteria andReplycountBetween(Integer value1, Integer value2) {
-            addCriterion("replyCount between", value1, value2, "replycount");
+        public Criteria andReplyCountBetween(Integer value1, Integer value2) {
+            addCriterion("replyCount between", value1, value2, "replyCount");
             return (Criteria) this;
         }
 
-        public Criteria andReplycountNotBetween(Integer value1, Integer value2) {
-            addCriterion("replyCount not between", value1, value2, "replycount");
+        public Criteria andReplyCountNotBetween(Integer value1, Integer value2) {
+            addCriterion("replyCount not between", value1, value2, "replyCount");
             return (Criteria) this;
         }
 
-        public Criteria andLogincountIsNull() {
+        public Criteria andLoginCountIsNull() {
             addCriterion("loginCount is null");
             return (Criteria) this;
         }
 
-        public Criteria andLogincountIsNotNull() {
+        public Criteria andLoginCountIsNotNull() {
             addCriterion("loginCount is not null");
             return (Criteria) this;
         }
 
-        public Criteria andLogincountEqualTo(Integer value) {
-            addCriterion("loginCount =", value, "logincount");
+        public Criteria andLoginCountEqualTo(Integer value) {
+            addCriterion("loginCount =", value, "loginCount");
             return (Criteria) this;
         }
 
-        public Criteria andLogincountNotEqualTo(Integer value) {
-            addCriterion("loginCount <>", value, "logincount");
+        public Criteria andLoginCountNotEqualTo(Integer value) {
+            addCriterion("loginCount <>", value, "loginCount");
             return (Criteria) this;
         }
 
-        public Criteria andLogincountGreaterThan(Integer value) {
-            addCriterion("loginCount >", value, "logincount");
+        public Criteria andLoginCountGreaterThan(Integer value) {
+            addCriterion("loginCount >", value, "loginCount");
             return (Criteria) this;
         }
 
-        public Criteria andLogincountGreaterThanOrEqualTo(Integer value) {
-            addCriterion("loginCount >=", value, "logincount");
+        public Criteria andLoginCountGreaterThanOrEqualTo(Integer value) {
+            addCriterion("loginCount >=", value, "loginCount");
             return (Criteria) this;
         }
 
-        public Criteria andLogincountLessThan(Integer value) {
-            addCriterion("loginCount <", value, "logincount");
+        public Criteria andLoginCountLessThan(Integer value) {
+            addCriterion("loginCount <", value, "loginCount");
             return (Criteria) this;
         }
 
-        public Criteria andLogincountLessThanOrEqualTo(Integer value) {
-            addCriterion("loginCount <=", value, "logincount");
+        public Criteria andLoginCountLessThanOrEqualTo(Integer value) {
+            addCriterion("loginCount <=", value, "loginCount");
             return (Criteria) this;
         }
 
-        public Criteria andLogincountIn(List<Integer> values) {
-            addCriterion("loginCount in", values, "logincount");
+        public Criteria andLoginCountIn(List<Integer> values) {
+            addCriterion("loginCount in", values, "loginCount");
             return (Criteria) this;
         }
 
-        public Criteria andLogincountNotIn(List<Integer> values) {
-            addCriterion("loginCount not in", values, "logincount");
+        public Criteria andLoginCountNotIn(List<Integer> values) {
+            addCriterion("loginCount not in", values, "loginCount");
             return (Criteria) this;
         }
 
-        public Criteria andLogincountBetween(Integer value1, Integer value2) {
-            addCriterion("loginCount between", value1, value2, "logincount");
+        public Criteria andLoginCountBetween(Integer value1, Integer value2) {
+            addCriterion("loginCount between", value1, value2, "loginCount");
             return (Criteria) this;
         }
 
-        public Criteria andLogincountNotBetween(Integer value1, Integer value2) {
-            addCriterion("loginCount not between", value1, value2, "logincount");
+        public Criteria andLoginCountNotBetween(Integer value1, Integer value2) {
+            addCriterion("loginCount not between", value1, value2, "loginCount");
             return (Criteria) this;
         }
 
-        public Criteria andRegistertimeIsNull() {
+        public Criteria andRegisterTimeIsNull() {
             addCriterion("registerTime is null");
             return (Criteria) this;
         }
 
-        public Criteria andRegistertimeIsNotNull() {
+        public Criteria andRegisterTimeIsNotNull() {
             addCriterion("registerTime is not null");
             return (Criteria) this;
         }
 
-        public Criteria andRegistertimeEqualTo(Date value) {
-            addCriterion("registerTime =", value, "registertime");
+        public Criteria andRegisterTimeEqualTo(Date value) {
+            addCriterion("registerTime =", value, "registerTime");
             return (Criteria) this;
         }
 
-        public Criteria andRegistertimeNotEqualTo(Date value) {
-            addCriterion("registerTime <>", value, "registertime");
+        public Criteria andRegisterTimeNotEqualTo(Date value) {
+            addCriterion("registerTime <>", value, "registerTime");
             return (Criteria) this;
         }
 
-        public Criteria andRegistertimeGreaterThan(Date value) {
-            addCriterion("registerTime >", value, "registertime");
+        public Criteria andRegisterTimeGreaterThan(Date value) {
+            addCriterion("registerTime >", value, "registerTime");
             return (Criteria) this;
         }
 
-        public Criteria andRegistertimeGreaterThanOrEqualTo(Date value) {
-            addCriterion("registerTime >=", value, "registertime");
+        public Criteria andRegisterTimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("registerTime >=", value, "registerTime");
             return (Criteria) this;
         }
 
-        public Criteria andRegistertimeLessThan(Date value) {
-            addCriterion("registerTime <", value, "registertime");
+        public Criteria andRegisterTimeLessThan(Date value) {
+            addCriterion("registerTime <", value, "registerTime");
             return (Criteria) this;
         }
 
-        public Criteria andRegistertimeLessThanOrEqualTo(Date value) {
-            addCriterion("registerTime <=", value, "registertime");
+        public Criteria andRegisterTimeLessThanOrEqualTo(Date value) {
+            addCriterion("registerTime <=", value, "registerTime");
             return (Criteria) this;
         }
 
-        public Criteria andRegistertimeIn(List<Date> values) {
-            addCriterion("registerTime in", values, "registertime");
+        public Criteria andRegisterTimeIn(List<Date> values) {
+            addCriterion("registerTime in", values, "registerTime");
             return (Criteria) this;
         }
 
-        public Criteria andRegistertimeNotIn(List<Date> values) {
-            addCriterion("registerTime not in", values, "registertime");
+        public Criteria andRegisterTimeNotIn(List<Date> values) {
+            addCriterion("registerTime not in", values, "registerTime");
             return (Criteria) this;
         }
 
-        public Criteria andRegistertimeBetween(Date value1, Date value2) {
-            addCriterion("registerTime between", value1, value2, "registertime");
+        public Criteria andRegisterTimeBetween(Date value1, Date value2) {
+            addCriterion("registerTime between", value1, value2, "registerTime");
             return (Criteria) this;
         }
 
-        public Criteria andRegistertimeNotBetween(Date value1, Date value2) {
-            addCriterion("registerTime not between", value1, value2, "registertime");
+        public Criteria andRegisterTimeNotBetween(Date value1, Date value2) {
+            addCriterion("registerTime not between", value1, value2, "registerTime");
             return (Criteria) this;
         }
 
@@ -1315,73 +1315,73 @@ public class UserExample {
             return (Criteria) this;
         }
 
-        public Criteria andComefromIsNull() {
+        public Criteria andComeFromIsNull() {
             addCriterion("comeFrom is null");
             return (Criteria) this;
         }
 
-        public Criteria andComefromIsNotNull() {
+        public Criteria andComeFromIsNotNull() {
             addCriterion("comeFrom is not null");
             return (Criteria) this;
         }
 
-        public Criteria andComefromEqualTo(String value) {
-            addCriterion("comeFrom =", value, "comefrom");
+        public Criteria andComeFromEqualTo(String value) {
+            addCriterion("comeFrom =", value, "comeFrom");
             return (Criteria) this;
         }
 
-        public Criteria andComefromNotEqualTo(String value) {
-            addCriterion("comeFrom <>", value, "comefrom");
+        public Criteria andComeFromNotEqualTo(String value) {
+            addCriterion("comeFrom <>", value, "comeFrom");
             return (Criteria) this;
         }
 
-        public Criteria andComefromGreaterThan(String value) {
-            addCriterion("comeFrom >", value, "comefrom");
+        public Criteria andComeFromGreaterThan(String value) {
+            addCriterion("comeFrom >", value, "comeFrom");
             return (Criteria) this;
         }
 
-        public Criteria andComefromGreaterThanOrEqualTo(String value) {
-            addCriterion("comeFrom >=", value, "comefrom");
+        public Criteria andComeFromGreaterThanOrEqualTo(String value) {
+            addCriterion("comeFrom >=", value, "comeFrom");
             return (Criteria) this;
         }
 
-        public Criteria andComefromLessThan(String value) {
-            addCriterion("comeFrom <", value, "comefrom");
+        public Criteria andComeFromLessThan(String value) {
+            addCriterion("comeFrom <", value, "comeFrom");
             return (Criteria) this;
         }
 
-        public Criteria andComefromLessThanOrEqualTo(String value) {
-            addCriterion("comeFrom <=", value, "comefrom");
+        public Criteria andComeFromLessThanOrEqualTo(String value) {
+            addCriterion("comeFrom <=", value, "comeFrom");
             return (Criteria) this;
         }
 
-        public Criteria andComefromLike(String value) {
-            addCriterion("comeFrom like", value, "comefrom");
+        public Criteria andComeFromLike(String value) {
+            addCriterion("comeFrom like", value, "comeFrom");
             return (Criteria) this;
         }
 
-        public Criteria andComefromNotLike(String value) {
-            addCriterion("comeFrom not like", value, "comefrom");
+        public Criteria andComeFromNotLike(String value) {
+            addCriterion("comeFrom not like", value, "comeFrom");
             return (Criteria) this;
         }
 
-        public Criteria andComefromIn(List<String> values) {
-            addCriterion("comeFrom in", values, "comefrom");
+        public Criteria andComeFromIn(List<String> values) {
+            addCriterion("comeFrom in", values, "comeFrom");
             return (Criteria) this;
         }
 
-        public Criteria andComefromNotIn(List<String> values) {
-            addCriterion("comeFrom not in", values, "comefrom");
+        public Criteria andComeFromNotIn(List<String> values) {
+            addCriterion("comeFrom not in", values, "comeFrom");
             return (Criteria) this;
         }
 
-        public Criteria andComefromBetween(String value1, String value2) {
-            addCriterion("comeFrom between", value1, value2, "comefrom");
+        public Criteria andComeFromBetween(String value1, String value2) {
+            addCriterion("comeFrom between", value1, value2, "comeFrom");
             return (Criteria) this;
         }
 
-        public Criteria andComefromNotBetween(String value1, String value2) {
-            addCriterion("comeFrom not between", value1, value2, "comefrom");
+        public Criteria andComeFromNotBetween(String value1, String value2) {
+            addCriterion("comeFrom not between", value1, value2, "comeFrom");
             return (Criteria) this;
         }
 

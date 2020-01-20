@@ -3,9 +3,9 @@
 <mapper namespace="net.industryhive.dao.ReplyMapper">
   <resultMap id="BaseResultMap" type="net.industryhive.bean.Reply">
     <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="topic_id" jdbcType="INTEGER" property="topicId" />
-    <result column="user_id" jdbcType="INTEGER" property="userId" />
-    <result column="submitTime" jdbcType="TIMESTAMP" property="submittime" />
+    <result column="topic_id" jdbcType="INTEGER" property="topic_id" />
+    <result column="user_id" jdbcType="INTEGER" property="user_id" />
+    <result column="submitTime" jdbcType="TIMESTAMP" property="submitTime" />
     <result column="floor" jdbcType="INTEGER" property="floor" />
     <result column="quote" jdbcType="INTEGER" property="quote" />
     <result column="deleted" jdbcType="BIT" property="deleted" />
@@ -129,8 +129,8 @@
     insert into reply (id, topic_id, user_id,
       submitTime, floor, quote,
       deleted, content)
-    values (#{id,jdbcType=INTEGER}, #{topicId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER},
-      #{submittime,jdbcType=TIMESTAMP}, #{floor,jdbcType=INTEGER}, #{quote,jdbcType=INTEGER},
+    values (#{id,jdbcType=INTEGER}, #{topic_id,jdbcType=INTEGER}, #{user_id,jdbcType=INTEGER},
+      #{submitTime,jdbcType=TIMESTAMP}, #{floor,jdbcType=INTEGER}, #{quote,jdbcType=INTEGER},
       #{deleted,jdbcType=BIT}, #{content,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="net.industryhive.bean.Reply">
@@ -139,13 +139,13 @@
       <if test="id != null">
         id,
       </if>
-      <if test="topicId != null">
+      <if test="topic_id != null">
         topic_id,
       </if>
-      <if test="userId != null">
+      <if test="user_id != null">
         user_id,
       </if>
-      <if test="submittime != null">
+      <if test="submitTime != null">
         submitTime,
       </if>
       <if test="floor != null">
@@ -165,14 +165,14 @@
       <if test="id != null">
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="topicId != null">
-        #{topicId,jdbcType=INTEGER},
+      <if test="topic_id != null">
+        #{topic_id,jdbcType=INTEGER},
       </if>
-      <if test="userId != null">
-        #{userId,jdbcType=INTEGER},
+      <if test="user_id != null">
+        #{user_id,jdbcType=INTEGER},
       </if>
-      <if test="submittime != null">
-        #{submittime,jdbcType=TIMESTAMP},
+      <if test="submitTime != null">
+        #{submitTime,jdbcType=TIMESTAMP},
       </if>
       <if test="floor != null">
         #{floor,jdbcType=INTEGER},
@@ -200,14 +200,14 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.topicId != null">
-        topic_id = #{record.topicId,jdbcType=INTEGER},
+      <if test="record.topic_id != null">
+        topic_id = #{record.topic_id,jdbcType=INTEGER},
       </if>
-      <if test="record.userId != null">
-        user_id = #{record.userId,jdbcType=INTEGER},
+      <if test="record.user_id != null">
+        user_id = #{record.user_id,jdbcType=INTEGER},
       </if>
-      <if test="record.submittime != null">
-        submitTime = #{record.submittime,jdbcType=TIMESTAMP},
+      <if test="record.submitTime != null">
+        submitTime = #{record.submitTime,jdbcType=TIMESTAMP},
       </if>
       <if test="record.floor != null">
         floor = #{record.floor,jdbcType=INTEGER},
@@ -229,9 +229,9 @@
   <update id="updateByExampleWithBLOBs" parameterType="map">
     update reply
     set id = #{record.id,jdbcType=INTEGER},
-      topic_id = #{record.topicId,jdbcType=INTEGER},
-      user_id = #{record.userId,jdbcType=INTEGER},
-      submitTime = #{record.submittime,jdbcType=TIMESTAMP},
+      topic_id = #{record.topic_id,jdbcType=INTEGER},
+      user_id = #{record.user_id,jdbcType=INTEGER},
+      submitTime = #{record.submitTime,jdbcType=TIMESTAMP},
       floor = #{record.floor,jdbcType=INTEGER},
       quote = #{record.quote,jdbcType=INTEGER},
       deleted = #{record.deleted,jdbcType=BIT},
@@ -243,9 +243,9 @@
   <update id="updateByExample" parameterType="map">
     update reply
     set id = #{record.id,jdbcType=INTEGER},
-      topic_id = #{record.topicId,jdbcType=INTEGER},
-      user_id = #{record.userId,jdbcType=INTEGER},
-      submitTime = #{record.submittime,jdbcType=TIMESTAMP},
+      topic_id = #{record.topic_id,jdbcType=INTEGER},
+      user_id = #{record.user_id,jdbcType=INTEGER},
+      submitTime = #{record.submitTime,jdbcType=TIMESTAMP},
       floor = #{record.floor,jdbcType=INTEGER},
       quote = #{record.quote,jdbcType=INTEGER},
       deleted = #{record.deleted,jdbcType=BIT}
@@ -256,14 +256,14 @@
   <update id="updateByPrimaryKeySelective" parameterType="net.industryhive.bean.Reply">
     update reply
     <set>
-      <if test="topicId != null">
-        topic_id = #{topicId,jdbcType=INTEGER},
+      <if test="topic_id != null">
+        topic_id = #{topic_id,jdbcType=INTEGER},
       </if>
-      <if test="userId != null">
-        user_id = #{userId,jdbcType=INTEGER},
+      <if test="user_id != null">
+        user_id = #{user_id,jdbcType=INTEGER},
       </if>
-      <if test="submittime != null">
-        submitTime = #{submittime,jdbcType=TIMESTAMP},
+      <if test="submitTime != null">
+        submitTime = #{submitTime,jdbcType=TIMESTAMP},
       </if>
       <if test="floor != null">
         floor = #{floor,jdbcType=INTEGER},
@@ -282,9 +282,9 @@
   </update>
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="net.industryhive.bean.Reply">
     update reply
-    set topic_id = #{topicId,jdbcType=INTEGER},
-      user_id = #{userId,jdbcType=INTEGER},
-      submitTime = #{submittime,jdbcType=TIMESTAMP},
+    set topic_id = #{topic_id,jdbcType=INTEGER},
+      user_id = #{user_id,jdbcType=INTEGER},
+      submitTime = #{submitTime,jdbcType=TIMESTAMP},
       floor = #{floor,jdbcType=INTEGER},
       quote = #{quote,jdbcType=INTEGER},
       deleted = #{deleted,jdbcType=BIT},
@@ -293,9 +293,9 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="net.industryhive.bean.Reply">
     update reply
-    set topic_id = #{topicId,jdbcType=INTEGER},
-      user_id = #{userId,jdbcType=INTEGER},
-      submitTime = #{submittime,jdbcType=TIMESTAMP},
+    set topic_id = #{topic_id,jdbcType=INTEGER},
+      user_id = #{user_id,jdbcType=INTEGER},
+      submitTime = #{submitTime,jdbcType=TIMESTAMP},
       floor = #{floor,jdbcType=INTEGER},
       quote = #{quote,jdbcType=INTEGER},
       deleted = #{deleted,jdbcType=BIT}

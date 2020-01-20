@@ -78,7 +78,7 @@ public class ContentService {
     public long getReplyCountByTopicId(int topicId) {
         ReplyExample example = new ReplyExample();
         ReplyExample.Criteria criteria = example.createCriteria();
-        criteria.andTopicIdEqualTo(topicId);
+        criteria.andTopic_idEqualTo(topicId);
         long replyCount = replyMapper.countByExample(example);
         return replyCount;
     }

@@ -11,7 +11,7 @@ public class User {
 
     private String username;
 
-    private String countrycode;
+    private String countryCode;
 
     private String mobile;
 
@@ -19,29 +19,29 @@ public class User {
 
     private Integer gender;
 
-    private Integer authorityId;
+    private Integer authority_id;
 
-    private Boolean bannedtopic;
+    private Boolean bannedTopic;
 
-    private Boolean bannedreply;
+    private Boolean bannedReply;
 
-    private Boolean bannedmessage;
+    private Boolean bannedMessage;
 
     private Boolean locked;
 
     private Boolean deleted;
 
-    private Integer topiccount;
+    private Integer topicCount;
 
-    private Integer replycount;
+    private Integer replyCount;
 
-    private Integer logincount;
+    private Integer loginCount;
 
-    private Date registertime;
+    private Date registerTime;
 
     private String photo;
 
-    private String comefrom;
+    private String comeFrom;
 
     private String introduction;
 
@@ -77,12 +77,12 @@ public class User {
         this.username = username == null ? null : username.trim();
     }
 
-    public String getCountrycode() {
-        return countrycode;
+    public String getCountryCode() {
+        return countryCode;
     }
 
-    public void setCountrycode(String countrycode) {
-        this.countrycode = countrycode == null ? null : countrycode.trim();
+    public void setCountryCode(String countryCode) {
+        this.countryCode = countryCode == null ? null : countryCode.trim();
     }
 
     public String getMobile() {
@@ -109,36 +109,36 @@ public class User {
         this.gender = gender;
     }
 
-    public Integer getAuthorityId() {
-        return authorityId;
+    public Integer getAuthority_id() {
+        return authority_id;
     }
 
-    public void setAuthorityId(Integer authorityId) {
-        this.authorityId = authorityId;
+    public void setAuthority_id(Integer authority_id) {
+        this.authority_id = authority_id;
     }
 
-    public Boolean getBannedtopic() {
-        return bannedtopic;
+    public Boolean getBannedTopic() {
+        return bannedTopic;
     }
 
-    public void setBannedtopic(Boolean bannedtopic) {
-        this.bannedtopic = bannedtopic;
+    public void setBannedTopic(Boolean bannedTopic) {
+        this.bannedTopic = bannedTopic;
     }
 
-    public Boolean getBannedreply() {
-        return bannedreply;
+    public Boolean getBannedReply() {
+        return bannedReply;
     }
 
-    public void setBannedreply(Boolean bannedreply) {
-        this.bannedreply = bannedreply;
+    public void setBannedReply(Boolean bannedReply) {
+        this.bannedReply = bannedReply;
     }
 
-    public Boolean getBannedmessage() {
-        return bannedmessage;
+    public Boolean getBannedMessage() {
+        return bannedMessage;
     }
 
-    public void setBannedmessage(Boolean bannedmessage) {
-        this.bannedmessage = bannedmessage;
+    public void setBannedMessage(Boolean bannedMessage) {
+        this.bannedMessage = bannedMessage;
     }
 
     public Boolean getLocked() {
@@ -157,36 +157,36 @@ public class User {
         this.deleted = deleted;
     }
 
-    public Integer getTopiccount() {
-        return topiccount;
+    public Integer getTopicCount() {
+        return topicCount;
     }
 
-    public void setTopiccount(Integer topiccount) {
-        this.topiccount = topiccount;
+    public void setTopicCount(Integer topicCount) {
+        this.topicCount = topicCount;
     }
 
-    public Integer getReplycount() {
-        return replycount;
+    public Integer getReplyCount() {
+        return replyCount;
     }
 
-    public void setReplycount(Integer replycount) {
-        this.replycount = replycount;
+    public void setReplyCount(Integer replyCount) {
+        this.replyCount = replyCount;
     }
 
-    public Integer getLogincount() {
-        return logincount;
+    public Integer getLoginCount() {
+        return loginCount;
     }
 
-    public void setLogincount(Integer logincount) {
-        this.logincount = logincount;
+    public void setLoginCount(Integer loginCount) {
+        this.loginCount = loginCount;
     }
 
-    public Date getRegistertime() {
-        return registertime;
+    public Date getRegisterTime() {
+        return registerTime;
     }
 
-    public void setRegistertime(Date registertime) {
-        this.registertime = registertime;
+    public void setRegisterTime(Date registerTime) {
+        this.registerTime = registerTime;
     }
 
     public String getPhoto() {
@@ -197,12 +197,12 @@ public class User {
         this.photo = photo == null ? null : photo.trim();
     }
 
-    public String getComefrom() {
-        return comefrom;
+    public String getComeFrom() {
+        return comeFrom;
     }
 
-    public void setComefrom(String comefrom) {
-        this.comefrom = comefrom == null ? null : comefrom.trim();
+    public void setComeFrom(String comeFrom) {
+        this.comeFrom = comeFrom == null ? null : comeFrom.trim();
     }
 
     public String getIntroduction() {

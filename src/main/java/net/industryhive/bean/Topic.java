@@ -5,17 +5,17 @@ import java.util.Date;
 public class Topic {
     private Integer id;
 
-    private Integer userId;
+    private Integer user_id;
 
-    private Date submittime;
+    private Date submitTime;
 
     private String label;
 
     private String title;
 
-    private Integer replycount;
+    private Integer replyCount;
 
-    private Integer viewcount;
+    private Integer viewCount;
 
     private Boolean locked;
 
@@ -33,20 +33,20 @@ public class Topic {
         this.id = id;
     }
 
-    public Integer getUserId() {
-        return userId;
+    public Integer getUser_id() {
+        return user_id;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setUser_id(Integer user_id) {
+        this.user_id = user_id;
     }
 
-    public Date getSubmittime() {
-        return submittime;
+    public Date getSubmitTime() {
+        return submitTime;
     }
 
-    public void setSubmittime(Date submittime) {
-        this.submittime = submittime;
+    public void setSubmitTime(Date submitTime) {
+        this.submitTime = submitTime;
     }
 
     public String getLabel() {
@@ -65,20 +65,20 @@ public class Topic {
         this.title = title == null ? null : title.trim();
     }
 
-    public Integer getReplycount() {
-        return replycount;
+    public Integer getReplyCount() {
+        return replyCount;
     }
 
-    public void setReplycount(Integer replycount) {
-        this.replycount = replycount;
+    public void setReplyCount(Integer replyCount) {
+        this.replyCount = replyCount;
     }
 
-    public Integer getViewcount() {
-        return viewcount;
+    public Integer getViewCount() {
+        return viewCount;
     }
 
-    public void setViewcount(Integer viewcount) {
-        this.viewcount = viewcount;
+    public void setViewCount(Integer viewCount) {
+        this.viewCount = viewCount;
     }
 
     public Boolean getLocked() {

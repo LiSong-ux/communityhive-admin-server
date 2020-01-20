@@ -5,11 +5,11 @@ import java.util.Date;
 public class Reply {
     private Integer id;
 
-    private Integer topicId;
+    private Integer topic_id;
 
-    private Integer userId;
+    private Integer user_id;
 
-    private Date submittime;
+    private Date submitTime;
 
     private Integer floor;
 
@@ -27,28 +27,28 @@ public class Reply {
         this.id = id;
     }
 
-    public Integer getTopicId() {
-        return topicId;
+    public Integer getTopic_id() {
+        return topic_id;
     }
 
-    public void setTopicId(Integer topicId) {
-        this.topicId = topicId;
+    public void setTopic_id(Integer topic_id) {
+        this.topic_id = topic_id;
     }
 
-    public Integer getUserId() {
-        return userId;
+    public Integer getUser_id() {
+        return user_id;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setUser_id(Integer user_id) {
+        this.user_id = user_id;
     }
 
-    public Date getSubmittime() {
-        return submittime;
+    public Date getSubmitTime() {
+        return submitTime;
     }
 
-    public void setSubmittime(Date submittime) {
-        this.submittime = submittime;
+    public void setSubmitTime(Date submitTime) {
+        this.submitTime = submitTime;
     }
 
     public Integer getFloor() {

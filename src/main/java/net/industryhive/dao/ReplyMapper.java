@@ -39,4 +39,5 @@ public interface ReplyMapper {
     /******************************************************************/
 
     List<WrapReply> findWithUsername(@Param("id") int topicId, @Param("startRow") int startRow);
+
 }
