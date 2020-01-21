@@ -305,7 +305,7 @@
   <resultMap extends="ResultMapWithBLOBs" id="ResultMapWithUsername" type="net.industryhive.bean.wrap.WrapReply">
     <result column="username" jdbcType="VARCHAR" property="username"/>
   </resultMap>
-  <select id="findWithUsername" resultMap="ResultMapWithUsername">
+  <select id="findWithUsername" parameterType="java.lang.Integer" resultMap="ResultMapWithUsername">
       select reply.*,user.username from reply,user
       where reply.topic_id=#{id} and reply.user_id=user.id limit #{startRow},50
   </select>
