@@ -85,4 +85,25 @@ public class NoticeController {
         return UnifiedResult.ok(id);
     }
 
+    @RequestMapping("/notice")
+    public UnifiedResult getNotice(Integer id) {
+        if (id == null) {
+            return UnifiedResult.build(400, "参数错误", null);
+        }
+        WrapNotice wrapNotice = noticeService.getWrapNotice(id);
+        if (wrapNotice == null) {
+            return UnifiedResult.build(400, "公告不存在", null);
+        }
+        return UnifiedResult.ok(wrapNotice);
+    }
+
+    @RequestMapping("/deleteNotice")
+    public UnifiedResult deleteTopic(Integer id) {
+        if (id == null) {
+            return UnifiedResult.build(400, "参数错误", null);
+        }
+        UnifiedResult result = noticeService.deleteNotice(id);
+        return result;
+    }
+
 }

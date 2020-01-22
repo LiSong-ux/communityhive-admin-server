@@ -40,4 +40,6 @@ public interface NoticeMapper {
 
     List<WrapNotice> findListWithUsername(@Param("startRow") int startRow);
 
+    WrapNotice findWithUsername(int id);
+
 }
