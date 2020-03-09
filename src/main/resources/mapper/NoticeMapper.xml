@@ -400,7 +400,8 @@
     <select id="findListWithUsername" parameterType="java.lang.Integer" resultMap="ResultMapWithUsername">
         SELECT n.id,n.submitTime,n.lastSubmitTime,n.label,n.title,n.content,n.position,n.viewCount,a.username,b.lastEdit
         FROM notice n,(SELECT user.id,user.username FROM user) a,(SELECT user.id,user.username lastEdit FROM user) b
-        WHERE n.user_id=a.id AND n.deleted=0 AND n.lastUser_id=b.id limit #{startRow},50
+        WHERE n.user_id=a.id AND n.deleted=0 AND n.lastUser_id=b.id
+        ORDER BY n.position ASC,n.submitTime DESC LIMIT #{startRow},50
     </select>
     <select id="findWithUsername" parameterType="java.lang.Integer" resultType="net.industryhive.bean.wrap.WrapNotice">
         SELECT n.id,n.submitTime,n.lastSubmitTime,n.label,n.title,n.content,n.position,n.viewCount,a.username,b.lastEdit
