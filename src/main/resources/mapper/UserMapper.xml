@@ -466,7 +466,7 @@
   </update>
     <!--===============================================================================================================-->
     <select id="selectAllUser" resultMap="BaseResultMap">
-      select id,account,username,email,gender,topicCount,replyCount,loginCount,registerTime from user limit #{startRow},100
+      select id,account,username,email,gender,locked,topicCount,replyCount,loginCount,registerTime from user limit #{startRow},100
     </select>
     <!--===============================================================================================================-->
 </mapper>

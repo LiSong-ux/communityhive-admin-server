@@ -6,9 +6,8 @@ import net.industryhive.entity.UnifiedResult;
 import net.industryhive.service.LoginService;
 import net.industryhive.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -23,7 +22,7 @@ import java.util.Map;
  * @author 未央
  * @create 2019-12-23 15:52
  */
-@Controller
+@RestController
 public class UserController {
 
     @Autowired
@@ -33,7 +32,6 @@ public class UserController {
     private LoginService loginService;
 
     @RequestMapping("/login")
-    @ResponseBody
     public UnifiedResult login(HttpServletRequest request) {
         HttpSession session = request.getSession();
 
@@ -76,14 +74,12 @@ public class UserController {
     }
 
     @RequestMapping("/logout")
-    @ResponseBody
     public UnifiedResult logout(HttpSession session) {
         session.removeAttribute("admin");
         return UnifiedResult.ok();
     }
 
     @RequestMapping("/allUser")
-    @ResponseBody
     public UnifiedResult getAllUser(Integer page) {
         if (page == null) {
             page = 1;
@@ -94,6 +90,15 @@ public class UserController {
         map.put("userList", userList);
         map.put("userCount", userCount);
         return UnifiedResult.ok(map);
+    }
+
+    @RequestMapping("/lockUser")
+    public UnifiedResult lockUser(Integer id, Integer locked) {
+        if (id == null || locked == null || (locked != 0 && locked != 1)) {
+            return UnifiedResult.build(400, "参数错误", null);
+        }
+        UnifiedResult result = userService.lockUser(id, locked);
+        return result;
     }
 
 }

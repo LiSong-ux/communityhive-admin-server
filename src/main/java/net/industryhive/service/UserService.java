@@ -3,6 +3,7 @@ package net.industryhive.service;
 import net.industryhive.bean.User;
 import net.industryhive.bean.UserExample;
 import net.industryhive.dao.UserMapper;
+import net.industryhive.entity.UnifiedResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,7 +36,7 @@ public class UserService {
         return userList;
     }
 
-    public long getUserCount(){
+    public long getUserCount() {
         UserExample example = new UserExample();
         long userCount = userMapper.countByExample(example);
         return userCount;
@@ -63,4 +64,33 @@ public class UserService {
         userMapper.updateByPrimaryKeySelective(updatedUser);
     }
 
+    /**
+     * 对用户执行封禁或解封操作
+     *
+     * @param id
+     * @param locked
+     * @return
+     */
+    public UnifiedResult lockUser(int id, int locked) {
+        if (id == 1) {
+            return UnifiedResult.build(400, "权限不足", null);
+        }
+        User user = userMapper.selectByPrimaryKey(id);
+        if (user == null || user.getDeleted() == true) {
+            return UnifiedResult.build(400, "用户不存在", null);
+        }
+        if (user.getLocked() == false && locked == 1) {
+            user.setLocked(true);
+        } else if (user.getLocked() == true && locked == 0) {
+            user.setLocked(false);
+        } else {
+            if (user.getLocked() == false && locked == 0) {
+                return UnifiedResult.build(400, "用户已解封", null);
+            } else {
+                return UnifiedResult.build(400, "用户已封禁", null);
+            }
+        }
+        userMapper.updateByPrimaryKeySelective(user);
+        return UnifiedResult.ok();
+    }
 }
