@@ -43,7 +43,7 @@ public class NoticeController {
     }
 
     @RequestMapping("/submitNotice")
-    public UnifiedResult submitNotice(HttpSession session,Notice newNotice){
+    public UnifiedResult submitNotice(HttpSession session, Notice newNotice) {
         String regLabel = "^[\\u4e00-\\u9fa5]{2,4}$";
         Pattern pattern = Pattern.compile(regLabel);
         Matcher matcher = pattern.matcher(newNotice.getLabel());

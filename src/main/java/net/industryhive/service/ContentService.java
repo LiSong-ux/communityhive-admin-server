@@ -130,4 +130,58 @@ public class ContentService {
         replyMapper.updateByPrimaryKeySelective(reply);
         return UnifiedResult.ok();
     }
+
+    /**
+     * 对帖子执行锁定或解锁操作
+     *
+     * @param id
+     * @param locked
+     * @return
+     */
+    public UnifiedResult lockTopic(int id, int locked) {
+        Topic topic = topicMapper.selectByPrimaryKey(id);
+        if (topic == null || topic.getDeleted() == true) {
+            return UnifiedResult.build(400, "帖子不存在", null);
+        }
+        if (topic.getLocked() == false && locked == 1) {
+            topic.setLocked(true);
+        } else if (topic.getLocked() == true && locked == 0) {
+            topic.setLocked(false);
+        } else {
+            if (topic.getLocked() == false && locked == 0) {
+                return UnifiedResult.build(400, "帖子已解锁", null);
+            } else {
+                return UnifiedResult.build(400, "帖子已锁定", null);
+            }
+        }
+        topicMapper.updateByPrimaryKeySelective(topic);
+        return UnifiedResult.ok();
+    }
+
+    /**
+     * 对帖子执行隐藏或显示操作
+     *
+     * @param id
+     * @param hided
+     * @return
+     */
+    public UnifiedResult hideTopic(int id, int hided) {
+        Topic topic = topicMapper.selectByPrimaryKey(id);
+        if (topic == null || topic.getDeleted() == true) {
+            return UnifiedResult.build(400, "帖子不存在", null);
+        }
+        if (topic.getHided() == false && hided == 1) {
+            topic.setHided(true);
+        } else if (topic.getHided() == true && hided == 0) {
+            topic.setHided(false);
+        } else {
+            if (topic.getHided() == false && hided == 0) {
+                return UnifiedResult.build(400, "帖子已显示", null);
+            } else {
+                return UnifiedResult.build(400, "帖子已隐藏", null);
+            }
+        }
+        topicMapper.updateByPrimaryKeySelective(topic);
+        return UnifiedResult.ok();
+    }
 }
