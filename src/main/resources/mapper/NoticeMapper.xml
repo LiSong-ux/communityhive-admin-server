@@ -398,7 +398,7 @@
         <result column="username" jdbcType="VARCHAR" property="username"/>
     </resultMap>
     <select id="findListWithUsername" parameterType="java.lang.Integer" resultMap="ResultMapWithUsername">
-        SELECT n.id,n.submitTime,n.lastSubmitTime,n.label,n.title,n.content,n.position,n.viewCount,a.username,b.lastEdit
+        SELECT n.id,n.submitTime,n.lastSubmitTime,n.label,n.title,n.content,n.position,n.viewCount,n.hided,a.username,b.lastEdit
         FROM notice n,(SELECT user.id,user.username FROM user) a,(SELECT user.id,user.username lastEdit FROM user) b
         WHERE n.user_id=a.id AND n.deleted=0 AND n.lastUser_id=b.id
         ORDER BY n.position ASC,n.submitTime DESC LIMIT #{startRow},50
