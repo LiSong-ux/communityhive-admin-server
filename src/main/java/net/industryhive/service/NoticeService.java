@@ -34,23 +34,40 @@ public class NoticeService {
         return count;
     }
 
-    public int addNotice(Notice newNotice){
+    public int addNotice(Notice newNotice) {
         noticeMapper.insertSelective(newNotice);
         return newNotice.getId();
     }
 
-    public WrapNotice getWrapNotice(int id){
+    public WrapNotice getWrapNotice(int id) {
         WrapNotice wrapNotice = noticeMapper.findWithUsername(id);
         return wrapNotice;
     }
 
-    public UnifiedResult deleteNotice(int id) {
+    public UnifiedResult hideNotice(int id, int hided) {
         Notice notice = noticeMapper.selectByPrimaryKey(id);
-        if (notice == null) {
+        if (notice == null || notice.getDeleted() == true) {
             return UnifiedResult.build(400, "公告不存在", null);
         }
-        if (notice.getDeleted() == true) {
-            return UnifiedResult.build(400, "公告已被删除", null);
+        if (notice.getHided() == false && hided == 1) {
+            notice.setHided(true);
+        } else if (notice.getHided() == true && hided == 0) {
+            notice.setHided(false);
+        } else {
+            if (notice.getHided() == false && hided == 0) {
+                return UnifiedResult.build(400, "公告已上架", null);
+            } else {
+                return UnifiedResult.build(400, "公告已下架", null);
+            }
+        }
+        noticeMapper.updateByPrimaryKeySelective(notice);
+        return UnifiedResult.ok();
+    }
+
+    public UnifiedResult deleteNotice(int id) {
+        Notice notice = noticeMapper.selectByPrimaryKey(id);
+        if (notice == null || notice.getDeleted() == true) {
+            return UnifiedResult.build(400, "公告不存在", null);
         }
         notice.setDeleted(true);
         noticeMapper.updateByPrimaryKeySelective(notice);

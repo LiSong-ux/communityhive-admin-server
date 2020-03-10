@@ -97,8 +97,17 @@ public class NoticeController {
         return UnifiedResult.ok(wrapNotice);
     }
 
+    @RequestMapping("/hideNotice")
+    public UnifiedResult hideNotice(Integer id, Integer hided) {
+        if (id == null || hided == null || (hided != 0 && hided != 1)) {
+            return UnifiedResult.build(400, "参数错误", null);
+        }
+        UnifiedResult result = noticeService.hideNotice(id, hided);
+        return result;
+    }
+
     @RequestMapping("/deleteNotice")
-    public UnifiedResult deleteTopic(Integer id) {
+    public UnifiedResult deleteNotice(Integer id) {
         if (id == null) {
             return UnifiedResult.build(400, "参数错误", null);
         }
