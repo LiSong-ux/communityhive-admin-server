@@ -72,9 +72,6 @@ public class UserService {
      * @return
      */
     public UnifiedResult lockUser(int id, int locked) {
-        if (id == 1) {
-            return UnifiedResult.build(400, "权限不足", null);
-        }
         User user = userMapper.selectByPrimaryKey(id);
         if (user == null || user.getDeleted() == true) {
             return UnifiedResult.build(400, "用户不存在", null);

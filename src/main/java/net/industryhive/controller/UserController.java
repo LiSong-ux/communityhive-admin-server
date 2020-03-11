@@ -41,13 +41,13 @@ public class UserController {
         }
 
         String account = request.getParameter("account");
-        if (!account.equals("LiSong-ux")) {
+        if (!account.equals("LiSong-test")) {
             return UnifiedResult.build(400, "账号或密码错误", null);
         }
 
         String password = request.getParameter("password");
 
-        User admin = userService.getUserByAccount("LiSong-ux");
+        User admin = userService.getUserByAccount("LiSong-test");
         if (admin == null || !admin.getPassword().equals(password)) {
             return UnifiedResult.build(400, "账号或密码错误", null);
         }
@@ -93,9 +93,13 @@ public class UserController {
     }
 
     @RequestMapping("/lockUser")
-    public UnifiedResult lockUser(Integer id, Integer locked) {
+    public UnifiedResult lockUser(HttpSession session, Integer id, Integer locked) {
         if (id == null || locked == null || (locked != 0 && locked != 1)) {
             return UnifiedResult.build(400, "参数错误", null);
+        }
+        User user = (User) session.getAttribute("admin");
+        if ((id == 1 && user.getId() != 1) || (id == user.getId() && user.getId() != 1)) {
+            return UnifiedResult.build(400, "权限不足", null);
         }
         UnifiedResult result = userService.lockUser(id, locked);
         return result;
