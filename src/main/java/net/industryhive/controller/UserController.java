@@ -41,13 +41,13 @@ public class UserController {
         }
 
         String account = request.getParameter("account");
-        if (!account.equals("LiSong-test")) {
+        if (!account.equals("LiSong-ux")) {
             return UnifiedResult.build(400, "账号或密码错误", null);
         }
 
         String password = request.getParameter("password");
 
-        User admin = userService.getUserByAccount("LiSong-test");
+        User admin = userService.getUserByAccount("LiSong-ux");
         if (admin == null || !admin.getPassword().equals(password)) {
             return UnifiedResult.build(400, "账号或密码错误", null);
         }
