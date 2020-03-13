@@ -7,6 +7,7 @@ import net.industryhive.dao.NoticeMapper;
 import net.industryhive.entity.UnifiedResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -37,6 +38,19 @@ public class NoticeService {
     public int addNotice(Notice newNotice) {
         noticeMapper.insertSelective(newNotice);
         return newNotice.getId();
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    public UnifiedResult updateNotice(Notice updatedNotice) {
+        Notice notice = noticeMapper.selectByPrimaryKey(updatedNotice.getId());
+        if (notice == null || notice.getDeleted()) {
+            return UnifiedResult.build(400, "公告不存在", null);
+        }
+        if (notice.getLocked()) {
+            return UnifiedResult.build(400, "公告已被锁定，无法修改", null);
+        }
+        noticeMapper.updateByPrimaryKeySelective(updatedNotice);
+        return UnifiedResult.ok();
     }
 
     public WrapNotice getWrapNotice(int id) {

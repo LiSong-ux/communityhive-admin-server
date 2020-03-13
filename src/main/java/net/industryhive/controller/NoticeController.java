@@ -44,29 +44,9 @@ public class NoticeController {
 
     @RequestMapping("/submitNotice")
     public UnifiedResult submitNotice(HttpSession session, Notice newNotice) {
-        String regLabel = "^[\\u4e00-\\u9fa5]{2,4}$";
-        Pattern pattern = Pattern.compile(regLabel);
-        Matcher matcher = pattern.matcher(newNotice.getLabel());
-        if (!matcher.matches()) {
-            return UnifiedResult.build(400, "公告标签为2至4位汉字", null);
-        }
-
-        if (newNotice.getTitle().length() < 4 || newNotice.getTitle().length() > 35) {
-            return UnifiedResult.build(400, "公告标题的长度为4至35个字符", null);
-        }
-
-        String validate = newNotice.getContent();
-        String validateA = validate.replaceAll(" ", "");
-        String validateB = validateA.replaceAll("<p>", "");
-        String validateC = validateB.replaceAll("</p>", "");
-        String validateD = validateC.replaceAll("&nbsp;", "");
-        String validateE = validateD.replaceAll("<br>", "");
-        if (validateE.length() == 0) {
-            return UnifiedResult.build(400, "公告内容不能为空！", null);
-        }
-
-        if (newNotice.getContent().length() > 16384) {
-            return UnifiedResult.build(400, "公告内容的长度不得超过16000个字符", null);
+        UnifiedResult checkResult = checkNoticeText(newNotice);
+        if (checkResult.getStatus() != 200) {
+            return checkResult;
         }
 
         User user = (User) session.getAttribute("admin");
@@ -83,6 +63,29 @@ public class NoticeController {
         int id = noticeService.addNotice(newNotice);
 
         return UnifiedResult.ok(id);
+    }
+
+    /**
+     * 编辑公告
+     *
+     * @param session
+     * @param editedNotice
+     * @return
+     */
+    @RequestMapping("/editNotice")
+    public UnifiedResult editNotice(HttpSession session, Notice editedNotice) {
+        if (editedNotice.getId() == null) {
+            return UnifiedResult.build(400, "公告id为空", null);
+        }
+        UnifiedResult checkResult = checkNoticeText(editedNotice);
+        if (checkResult.getStatus() != 200) {
+            return checkResult;
+        }
+        User user = (User) session.getAttribute("admin");
+        editedNotice.setLastUser_id(user.getId());
+        editedNotice.setLastSubmitTime(new Date());
+        UnifiedResult result = noticeService.updateNotice(editedNotice);
+        return result;
     }
 
     @RequestMapping("/notice")
@@ -113,6 +116,40 @@ public class NoticeController {
         }
         UnifiedResult result = noticeService.deleteNotice(id);
         return result;
+    }
+
+    /**
+     * 该方法用来校验公告的标签、标题、内容等文本内容
+     *
+     * @param notice
+     * @return
+     */
+    public UnifiedResult checkNoticeText(Notice notice) {
+        String regLabel = "^[\\u4e00-\\u9fa5]{2,4}$";
+        Pattern pattern = Pattern.compile(regLabel);
+        Matcher matcher = pattern.matcher(notice.getLabel());
+        if (!matcher.matches()) {
+            return UnifiedResult.build(400, "公告标签为2至4位汉字", null);
+        }
+
+        if (notice.getTitle().length() < 4 || notice.getTitle().length() > 35) {
+            return UnifiedResult.build(400, "公告标题的长度为4至35个字符", null);
+        }
+
+        String validate = notice.getContent();
+        String validateA = validate.replaceAll(" ", "");
+        String validateB = validateA.replaceAll("<p>", "");
+        String validateC = validateB.replaceAll("</p>", "");
+        String validateD = validateC.replaceAll("&nbsp;", "");
+        String validateE = validateD.replaceAll("<br>", "");
+        if (validateE.length() == 0) {
+            return UnifiedResult.build(400, "公告内容不能为空！", null);
+        }
+
+        if (notice.getContent().length() > 16384) {
+            return UnifiedResult.build(400, "公告内容的长度不得超过16000个字符", null);
+        }
+        return UnifiedResult.ok();
     }
 
 }
