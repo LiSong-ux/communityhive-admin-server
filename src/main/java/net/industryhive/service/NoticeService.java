@@ -58,6 +58,33 @@ public class NoticeService {
         return wrapNotice;
     }
 
+    /**
+     * 对公告执行锁定或解锁操作
+     *
+     * @param id
+     * @param locked
+     * @return
+     */
+    public UnifiedResult lockNotice(int id, int locked) {
+        Notice notice = noticeMapper.selectByPrimaryKey(id);
+        if (notice == null || notice.getDeleted()) {
+            return UnifiedResult.build(400, "公告不存在", null);
+        }
+        if (!notice.getLocked() && locked == 1) {
+            notice.setLocked(true);
+        } else if (notice.getLocked() && locked == 0) {
+            notice.setLocked(false);
+        } else {
+            if (!notice.getLocked() && locked == 0) {
+                return UnifiedResult.build(400, "公告已解锁", null);
+            } else {
+                return UnifiedResult.build(400, "公告已锁定", null);
+            }
+        }
+        noticeMapper.updateByPrimaryKeySelective(notice);
+        return UnifiedResult.ok();
+    }
+
     public UnifiedResult hideNotice(int id, int hided) {
         Notice notice = noticeMapper.selectByPrimaryKey(id);
         if (notice == null || notice.getDeleted() == true) {

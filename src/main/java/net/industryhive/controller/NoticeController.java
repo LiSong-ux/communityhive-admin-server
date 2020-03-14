@@ -100,6 +100,15 @@ public class NoticeController {
         return UnifiedResult.ok(wrapNotice);
     }
 
+    @RequestMapping("/lockNotice")
+    public UnifiedResult lockNotice(Integer id, Integer locked) {
+        if (id == null || locked == null || (locked != 0 && locked != 1)) {
+            return UnifiedResult.build(400, "参数错误", null);
+        }
+        UnifiedResult result = noticeService.lockNotice(id, locked);
+        return result;
+    }
+
     @RequestMapping("/hideNotice")
     public UnifiedResult hideNotice(Integer id, Integer hided) {
         if (id == null || hided == null || (hided != 0 && hided != 1)) {

@@ -140,15 +140,15 @@ public class ContentService {
      */
     public UnifiedResult lockTopic(int id, int locked) {
         Topic topic = topicMapper.selectByPrimaryKey(id);
-        if (topic == null || topic.getDeleted() == true) {
+        if (topic == null || topic.getDeleted()) {
             return UnifiedResult.build(400, "帖子不存在", null);
         }
-        if (topic.getLocked() == false && locked == 1) {
+        if (!topic.getLocked() && locked == 1) {
             topic.setLocked(true);
-        } else if (topic.getLocked() == true && locked == 0) {
+        } else if (topic.getLocked() && locked == 0) {
             topic.setLocked(false);
         } else {
-            if (topic.getLocked() == false && locked == 0) {
+            if (!topic.getLocked() && locked == 0) {
                 return UnifiedResult.build(400, "帖子已解锁", null);
             } else {
                 return UnifiedResult.build(400, "帖子已锁定", null);
