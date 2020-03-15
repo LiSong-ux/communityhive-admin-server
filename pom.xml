@@ -162,4 +162,39 @@
         </dependency>
 
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <!-- 域名也可以 -->
+                    <url>http://inhive.net:8080/manager/text</url>
+                    <!-- 可以在maven的setting.xml中配置
+                        <server>
+                            <id>TomcatServer</id>
+                            <username>admin</username>
+                            <password>123456</password>
+                        </server>
+                        作为全局登录秘钥，也可单独配置
+                        如果使用全局的秘钥则必须写<server>xxx</server>
+                        xxx与全局定义的id名称相同
+                    -->
+                    <server>TomcatServer</server>
+                    <username>LiSong-ux</username>
+                    <password>!@LN7309zrt</password>
+                    <!--
+                        发布的路径，与tomcat管理目录中的路径对应
+                        /表示发布到根目录
+                    -->
+                    <path>/communityhive-admin-server</path>
+                    <!-- <update>true</update> 会将发布目录下的数据清空 -->
+                    <update>true</update>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
