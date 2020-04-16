@@ -16,6 +16,8 @@
                 connectionURL="jdbc:mysql://localhost:3306/communityhive_3u0"
                 userId="root"
                 password="123">
+            <!-- 识别主键 -->
+            <property name="useInformationSchema" value="true"/>
         </jdbcConnection>
 
         <javaTypeResolver>
